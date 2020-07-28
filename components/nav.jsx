@@ -9,15 +9,15 @@ const links = [
 export default function Nav() {
   return (
     <nav className="flex flex-wrap items-center justify-between p-4">
-      <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center">
+      <div className="w-auto">
         <Link href="/">
-          <a className="text-xl font-semibold">
+          <a className={styles.logo}>
             vidu.sh<span className="highlight">/an</span>
           </a>
         </Link>
       </div>
       <div className="block lg:hidden">
-        <button className="flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500">
+        <button className="flex items-center py-2 px-3 text-teal-500 rounded border border-teal-500">
           <svg
             className="fill-current h-3 w-3"
             viewBox="0 0 20 20"
@@ -35,7 +35,7 @@ export default function Nav() {
         <Link href="/">
           <a className={styles.navlink}>Blog</a>
         </Link>
-        <Link href="/posts/about">
+        <Link href="/about">
           <a className={styles.navlink}>About</a>
         </Link>
       </div>

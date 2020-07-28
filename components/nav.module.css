@@ -1,12 +1,18 @@
+.logo {
+  font-family: "Roboto", sans-serif;
+  @apply text-xl;
+  @apply font-semibold;
+}
+
 .navlink {
   @apply block;
   @apply mt-4;
   @apply mr-10;
-  @apply text-blue-900;
+  @apply text-teal-900;
 }
 
 .navlink:hover {
-  @apply text-blue-700;
+  @apply text-teal-700;
 }
 
 @screen lg {

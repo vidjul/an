@@ -1,7 +1,15 @@
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
+const withPlugins = require("next-compose-plugins");
+const withMdxEnhanced = require("next-mdx-enhanced");
+const mdxPrism = require("mdx-prism");
+
+const mdx = withMdxEnhanced({
+  defaultLayout: true,
+  fileExtensions: ["mdx", "md"],
+  rehypePlugins: [mdxPrism],
 });
 
-module.exports = withMDX({
-  pageExtensions: ["md", "mdx", "jsx", "js"],
-});
+const nextConfig = {
+  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"],
+};
+
+module.exports = withPlugins([mdx], nextConfig);

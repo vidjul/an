@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Head from "next/head";
+
 import Nav from "../components/nav";
+import BlogIndex from "../components/blogIndex";
 
 export default function IndexPage() {
   return (
@@ -53,11 +55,12 @@ export default function IndexPage() {
               <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
               <i>Testing stuffs on computer (like crafting this website).</i>
             </p>
-            <Link href="/posts/about">
-              <a className="text-blue-700 hover:underline">More about me »</a>
+            <Link href="/about">
+              <a className="text-teal-700 hover:underline">More about me »</a>
             </Link>
           </div>
         </section>
+        <BlogIndex />
       </div>
     </>
   );
