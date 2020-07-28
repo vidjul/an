@@ -7,9 +7,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.11",
+    "@next/mdx": "^9.4.4",
+    "gray-matter": "^4.0.2",
     "next": "^9.2.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "sass": "^1.26.10"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",
