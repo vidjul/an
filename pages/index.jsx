@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 import Nav from "../components/nav";
 import BlogIndex from "../components/blogIndex";
@@ -7,8 +8,11 @@ import BlogIndex from "../components/blogIndex";
 export default function IndexPage() {
   return (
     <>
+      <NextSeo
+        title="vidu.sh/an | Home"
+        description="Vidushan Chooriyakumaran's personal website."
+      />
       <Head>
-        <title>Vidushan CHOORIYAKUMARAN - Home</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
