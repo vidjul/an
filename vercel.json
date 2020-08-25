@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/an",
+      "destination": "/"
+    },
+    {
+      "source": "/an/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}
