@@ -32,9 +32,6 @@ export default function Nav() {
         <Link href="/">
           <a className={styles.navlink}>Home</a>
         </Link>
-        <Link href="/">
-          <a className={styles.navlink}>Blog</a>
-        </Link>
         <Link href="/about">
           <a className={styles.navlink}>About</a>
         </Link>
