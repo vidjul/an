@@ -1,13 +1,9 @@
 {
   "version": 2,
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/an",
-      "destination": "/"
-    },
-    {
-      "source": "/an/(.*)",
-      "destination": "/$1"
+      "source": "/",
+      "destination": "/an"
     }
   ]
 }

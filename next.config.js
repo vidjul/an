@@ -19,6 +19,7 @@ const mdx = withMdxEnhanced({
 
 const nextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"],
+  basePath: "/an",
 };
 
 module.exports = withPlugins([mdx], nextConfig);

@@ -4,6 +4,7 @@ import { NextSeo } from "next-seo";
 
 import Nav from "../components/nav";
 import BlogIndex from "../components/blogIndex";
+import Image from "../components/image";
 
 export default function IndexPage() {
   return (
@@ -48,7 +49,7 @@ export default function IndexPage() {
         <Nav />
         <section className="py-12 px-4 text-center">
           <div className="w-full max-w-2xl mx-auto">
-            <img
+            <Image
               src="/images/vidushan.jpg"
               alt="A photo of myself."
               className="rounded-full h-48 w-48 mx-auto"
