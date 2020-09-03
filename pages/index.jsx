@@ -10,7 +10,7 @@ export default function IndexPage() {
   return (
     <>
       <NextSeo
-        title="vidu.sh/an | Home"
+        title="Vidushan Chooriyakumaran | Home"
         description="Vidushan Chooriyakumaran's personal website."
       />
       <Head>
