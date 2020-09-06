@@ -45,8 +45,8 @@ export default function IndexPage() {
           href="/an/android-chrome-512x512.png"
         />
       </Head>
+      <Nav />
       <div className="container mx-auto px-4">
-        <Nav />
         <section className="py-12 px-4 text-center">
           <div className="w-full max-w-2xl mx-auto">
             <Image
