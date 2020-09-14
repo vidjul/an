@@ -3,14 +3,17 @@
 @tailwind base;
 @tailwind components;
 
-body {
-  @apply bg-gray-100;
-}
-
 h1 {
   font-family: "Roboto", sans-serif;
   @apply text-xl;
   @apply font-semibold;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  @apply text-lg;
+  @apply text-green-500;
+  @apply font-bold;
 }
 
 p {
