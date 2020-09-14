@@ -1,0 +1,11 @@
+.social {
+  @apply text-gray-500;
+}
+
+.social:nth-of-type(n + 2) {
+  @apply ml-3;
+}
+
+.social:hover {
+  @apply text-green-500;
+}
