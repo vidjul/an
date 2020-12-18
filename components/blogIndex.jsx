@@ -7,9 +7,9 @@ export default function blogIndex() {
     <section className="text-gray-700 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="-my-8">
+          <h3>Blog entries</h3>
           {blogPages.map((page) => (
             <div key={page.__resourcePath}>
-              <h3>Blog entries</h3>
               <div className="py-8 flex flex-wrap md:flex-no-wrap">
                 <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                   <span className="tracking-widest font-medium title-font text-gray-900 uppercase">

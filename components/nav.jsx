@@ -33,8 +33,8 @@ export default class nav extends Component {
     }
 
     return (
-      <div className="sticky top-0 w-full bg-white shadow-xs">
-        <nav className="container mx-auto flex flex-wrap items-center justify-between p-4">
+      <div className="sticky top-0 w-full bg-white shadow-sm z-10">
+        <nav className="container mx-auto flex flex-wrap items-center justify-between px-32 py-4">
           <div className="w-auto">
             <Link href="/">
               <a className={styles.logo}>

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import BlogIndex from "../components/blogIndex";
-import Image from "../components/image";
 
 export default function IndexPage() {
   return (
@@ -47,13 +47,15 @@ export default function IndexPage() {
         />
       </Head>
       <Nav />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-32">
         <section className="py-12 px-4 text-center">
           <div className="w-full max-w-2xl mx-auto">
             <Image
               src="/images/vidushan.jpg"
               alt="A photo of myself."
               className="rounded-full h-48 w-48 mx-auto"
+              width="192"
+              height="192"
             />
             <h2 className="mt-4 font-heading text-3xl">Hey, I'm Vidushan!</h2>
             <p className="my-2">

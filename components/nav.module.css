@@ -8,11 +8,11 @@
   @apply block;
   @apply mt-4;
   @apply mr-10;
-  @apply text-teal-900;
+  @apply text-indigo-900;
 }
 
 .navlink:hover {
-  @apply text-teal-700;
+  @apply text-indigo-700;
 }
 
 @screen lg {
