@@ -17,10 +17,14 @@ const mdx = withMdxEnhanced({
   },
 });
 
+const basePath = "/an";
+
 const nextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"],
-  basePath: "/an",
-  assetPrefix: "/an/",
+  basePath,
+  images: {
+    path: `${basePath}/_next/image`,
+  },
 };
 
 module.exports = withPlugins([mdx], nextConfig);

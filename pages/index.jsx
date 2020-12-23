@@ -51,7 +51,7 @@ export default function IndexPage() {
         <section className="py-12 px-4 text-center">
           <div className="w-full max-w-2xl mx-auto">
             <Image
-              src="/images/vidushan.jpg"
+              src="/an/images/vidushan.jpg"
               alt="A photo of myself."
               className="rounded-full h-48 w-48 mx-auto"
               width="192"
