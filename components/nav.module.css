@@ -7,12 +7,15 @@
 .navlink {
   @apply block;
   @apply mt-4;
-  @apply mr-10;
   @apply text-indigo-900;
 }
 
 .navlink:hover {
   @apply text-indigo-700;
+}
+
+.navlink:not(:last-child) {
+  @apply mr-10;
 }
 
 @screen lg {

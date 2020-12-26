@@ -34,7 +34,7 @@ export default class nav extends Component {
 
     return (
       <div className="sticky top-0 w-full bg-white shadow-sm z-10">
-        <nav className="container mx-auto flex flex-wrap items-center justify-between lg:px-32 p-4">
+        <nav className="container mx-auto flex flex-wrap items-center justify-between p-4">
           <div className="w-auto">
             <Link href="/">
               <a className={styles.logo}>
@@ -45,7 +45,7 @@ export default class nav extends Component {
           <div className="block lg:hidden">
             <button
               onClick={this.handleHamburgerClick}
-              className="flex items-center py-2 px-3 text-teal-500 rounded border border-teal-500"
+              className="flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500"
             >
               <svg
                 className="fill-current h-3 w-3"

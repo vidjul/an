@@ -12,7 +12,7 @@ h1 {
 h3 {
   font-family: "Roboto", sans-serif;
   @apply text-lg;
-  @apply text-green-500;
+  @apply text-blue-500;
   @apply font-bold;
 }
 
@@ -22,11 +22,11 @@ p {
 }
 
 span.highlight {
-  @apply text-green-500;
+  @apply text-blue-500;
 }
 
 i {
-  @apply text-green-500;
+  @apply text-blue-500;
   @apply font-semibold;
   font-style: initial;
 }

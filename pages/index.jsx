@@ -64,7 +64,7 @@ export default function IndexPage() {
               <i>Testing stuffs on computer (like crafting this website).</i>
             </p>
             <Link href="/about">
-              <a className="text-teal-700 hover:underline">More about me »</a>
+              <a className="text-indigo-700 hover:underline">More about me »</a>
             </Link>
           </div>
         </section>

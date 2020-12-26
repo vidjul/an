@@ -28,7 +28,7 @@ export default function blogIndex() {
                   </h2>
                   <p className="leading-relaxed">{page.description}</p>
                   <Link href={formatPath(page.__resourcePath)}>
-                    <a className="text-green-500 inline-flex items-center mt-4">
+                    <a className="text-indigo-500 inline-flex items-center mt-4">
                       Learn More
                       <svg
                         className="w-4 h-4 ml-2"
