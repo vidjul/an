@@ -56,5 +56,5 @@ export default function blogIndex() {
 }
 
 function formatPath(p) {
-  return p.replace(/\.mdx$/, "");
+  return `/${p.replace(/\.mdx$/, "")}`;
 }
