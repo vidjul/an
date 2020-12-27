@@ -7,11 +7,11 @@
 .navlink {
   @apply block;
   @apply mt-4;
-  @apply text-indigo-900;
+  @apply text-blue-500;
 }
 
 .navlink:hover {
-  @apply text-indigo-700;
+  @apply text-blue-700;
 }
 
 .navlink:not(:last-child) {

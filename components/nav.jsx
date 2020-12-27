@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import styles from "./nav.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ThemeChanger from "./themeChanger";
 
 export default class nav extends Component {
   constructor(props) {
@@ -26,14 +28,15 @@ export default class nav extends Component {
       { href: "https://nextjs.org/docs", label: "Docs" },
     ];
 
-    let menuClass = "lg:order-3 lg:block w-full lg:w-2/5 lg:text-right";
+    let menuClass =
+      "lg:order-2 lg:block w-full lg:w-auto lg:flex lg:flex-wrap lg:items-center";
 
     if (!this.state.menuIsOpen) {
       menuClass += " hidden";
     }
 
     return (
-      <div className="sticky top-0 w-full bg-white shadow-sm z-10">
+      <div className="sticky top-0 w-full bg-white dark:bg-gray-800 shadow-sm z-10">
         <nav className="container mx-auto flex flex-wrap items-center justify-between p-4">
           <div className="w-auto">
             <Link href="/">
@@ -43,19 +46,15 @@ export default class nav extends Component {
             </Link>
           </div>
           <div className="block lg:hidden">
-            <button
-              onClick={this.handleHamburgerClick}
-              className="flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500"
-            >
-              <svg
-                className="fill-current h-3 w-3"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="grid grid-cols-2 gap-2">
+              <ThemeChanger />
+              <button
+                onClick={this.handleHamburgerClick}
+                className="flex items-center py-2 px-3 text-blue-500 rounded border border-blue-500"
               >
-                <title>Menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-              </svg>
-            </button>
+                <FontAwesomeIcon icon="hamburger" />
+              </button>
+            </div>
           </div>
           <div className={menuClass}>
             <Link href="/">
@@ -64,6 +63,9 @@ export default class nav extends Component {
             <Link href="/about">
               <a className={styles.navlink}>About</a>
             </Link>
+            <div className="hidden lg:block">
+              <ThemeChanger />
+            </div>
           </div>
         </nav>
       </div>

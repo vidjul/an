@@ -47,7 +47,7 @@ export default function IndexPage() {
         />
       </Head>
       <Nav />
-      <div className="container mx-auto lg:px-32">
+      <div className="container mx-auto lg:px-32 dark:bg-gray-600">
         <section className="py-12 px-4 text-center">
           <div className="w-full max-w-2xl mx-auto">
             <Image
@@ -64,7 +64,7 @@ export default function IndexPage() {
               <i>Testing stuffs on computer (like crafting this website).</i>
             </p>
             <Link href="/about">
-              <a className="text-indigo-700 hover:underline">More about me »</a>
+              <a className="text-blue-500 hover:underline">More about me »</a>
             </Link>
           </div>
         </section>

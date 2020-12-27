@@ -1,5 +1,6 @@
 .social {
   @apply text-gray-500;
+  @apply dark:text-gray-400;
 }
 
 .social:nth-of-type(n + 2) {
