@@ -14,6 +14,10 @@ import {
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { ThemeProvider } from "next-themes";
 
+import "@fontsource/rubik";
+import "@fontsource/sintony";
+import "@fontsource/poppins";
+
 config.autoAddCss = false;
 library.add(
   fab,

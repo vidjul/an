@@ -13,7 +13,7 @@ export default function DefaultLayout({ children, frontMatter }) {
       />
       <Nav />
       <div className="container mx-auto px-4">
-        <div className="px-4 py-8 mb-4">
+        <div className="px-4 py-8 m-4">
           <article className="prose prose-blue lg:prose-xl max-w-2xl mx-auto">
             {children}
           </article>

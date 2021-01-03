@@ -7,6 +7,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fontsource/poppins": "^4.1.0",
+    "@fontsource/rubik": "^4.1.0",
+    "@fontsource/sintony": "^4.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
