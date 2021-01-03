@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Inter&display=swap");
 
-@tailwind base;
-@tailwind components;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
 * {
   @apply dark:text-white;
@@ -35,6 +35,6 @@ i {
   font-style: initial;
 }
 
-@tailwind utilities;
+@import "tailwindcss/utilities";
 
 // @import "duotone";
