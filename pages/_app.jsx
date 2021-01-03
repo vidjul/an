@@ -1,4 +1,4 @@
-import "../styles/index.scss";
+import "../styles/index.css";
 import Router from "next/router";
 import withGA from "next-ga";
 import { config, library } from "@fortawesome/fontawesome-svg-core";

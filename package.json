@@ -1,5 +1,5 @@
 {
-  "name": "with-tailwindcss",
+  "name": "an",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -14,23 +14,15 @@
     "@mapbox/rehype-prism": "^0.5.0",
     "@mdx-js/loader": "^1.6.11",
     "@next/mdx": "^9.4.4",
-    "@tailwindcss/typography": "^0.3.1",
-    "autoprefixer": "^10.1.0",
     "babel-plugin-import-glob-array": "^0.2.0",
     "gray-matter": "^4.0.2",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^8.0.0",
-    "lqip-loader": "^2.2.1",
     "mdx-prism": "^0.3.1",
-    "next": "^10.0.5-canary.6",
+    "next": "^10.0.5-canary.8",
     "next-compose-plugins": "^2.2.0",
     "next-ga": "^2.3.4",
     "next-mdx-enhanced": "^4.0.0",
-    "next-optimized-images": "^2.6.2",
     "next-seo": "^4.7.3",
     "next-themes": "0.0.10",
-    "postcss": "^8.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reading-time": "^1.2.0",
@@ -40,7 +32,9 @@
     "sass": "^1.26.10"
   },
   "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^2.0.2"
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.1",
+    "tailwindcss": "^2.0.2",
+    "@tailwindcss/typography": "^0.3.1"
   }
 }
