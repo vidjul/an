@@ -20,6 +20,7 @@ const mdx = withMdxEnhanced({
 const basePath = "/an";
 
 const nextConfig = {
+  target: "serverless",
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"],
   basePath,
 };
