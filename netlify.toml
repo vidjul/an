@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/"
+  to = "/an"
+  force = true
+
+[[redirects]]
+  from = "/an/*"
+  to = "/:splat"
+  status = 200
