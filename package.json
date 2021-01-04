@@ -20,7 +20,7 @@
     "babel-plugin-import-glob-array": "^0.2.0",
     "gray-matter": "^4.0.2",
     "mdx-prism": "^0.3.1",
-    "next": "^10.0.5-canary.8",
+    "next": "^10.0.5-canary.9",
     "next-compose-plugins": "^2.2.0",
     "next-ga": "^2.3.4",
     "next-mdx-enhanced": "^4.0.0",
