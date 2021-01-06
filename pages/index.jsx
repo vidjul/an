@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import BlogIndex from "../components/blogIndex";
+import Favicons from "../components/favicons";
 
 export default function IndexPage() {
   return (
@@ -15,36 +16,7 @@ export default function IndexPage() {
         description="Vidushan Chooriyakumaran's personal website."
       />
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/an/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/an/favicon-16x16.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/an/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/an/android-chrome-192x192.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="512x512"
-          href="/an/android-chrome-512x512.png"
-        />
+        <Favicons />
       </Head>
       <Nav />
       <div className="container mx-auto lg:px-32 dark:bg-gray-600">
