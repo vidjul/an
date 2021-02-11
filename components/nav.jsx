@@ -36,7 +36,7 @@ export default class nav extends Component {
     }
 
     return (
-      <div className="sticky top-0 w-full bg-white dark:bg-gray-800 shadow-sm z-10">
+      <div className="sticky top-0 w-full bg-secondary dark:bg-secondary-dark z-10">
         <nav className="container mx-auto flex flex-wrap items-center justify-between p-4">
           <div className="w-auto">
             <Link href="/">
@@ -50,7 +50,7 @@ export default class nav extends Component {
               <ThemeChanger />
               <button
                 onClick={this.handleHamburgerClick}
-                className="flex items-center py-2 px-3 text-blue-500 rounded border border-blue-500"
+                className="flex items-center py-2 px-3 text-primary rounded border border-primary"
               >
                 <FontAwesomeIcon icon="hamburger" />
               </button>

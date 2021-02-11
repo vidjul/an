@@ -2,16 +2,17 @@
   font-family: "Rubik", sans-serif;
   @apply text-xl;
   @apply font-semibold;
+  @apply text-primary;
 }
 
 .navlink {
   @apply block;
   @apply mt-4;
-  @apply text-blue-500;
+  @apply text-primary;
 }
 
 .navlink:hover {
-  @apply text-blue-700;
+  @apply text-primary;
 }
 
 .navlink:not(:last-child) {

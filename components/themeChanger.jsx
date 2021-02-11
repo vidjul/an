@@ -9,7 +9,7 @@ export default function themeChanger() {
     <div>
       <button
         type="button"
-        className="flex items-center py-2 px-3 text-blue-500 rounded border border-blue-500"
+        className="flex items-center py-2 px-3 text-primary rounded border border-primary"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
         <FontAwesomeIcon icon="adjust" />

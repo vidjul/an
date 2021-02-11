@@ -19,25 +19,41 @@ export default function IndexPage() {
         <Favicons />
       </Head>
       <Nav />
-      <div className="container mx-auto lg:px-32 dark:bg-gray-600">
-        <section className="py-12 px-4 text-center">
-          <div className="w-full prose prose-blue lg:prose-xl max-w-2xl mx-auto">
-            <Image
-              src="/an/images/vidushan.jpg"
-              alt="A photo of myself."
-              className="rounded-full h-48 w-48 mx-auto"
-              width="192"
-              height="192"
-            />
-            <h2 className="font-heading">Hey, I'm Vidushan!</h2>
-            <p>
+      <div className="container mx-auto bg-secondary dark:bg-secondary-dark">
+        <section className="text-center flex h-screen">
+          <div className="my-auto lg:w-1/2 prose lg:prose-xl dark:prose-dark">
+            <div className="m-8 lg:hidden">
+              <Image
+                src="/an/images/vidushan.jpg"
+                alt="A photo of myself."
+                className="rounded-full"
+                width="180"
+                height="180"
+              />
+            </div>
+            <h1>Hey, I'm Vidushan!</h1>
+            <p className="px-16">
               I'm a 24 years old software engineer based in Paris. I love{" "}
               <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
               <i>Testing stuffs on computer (like crafting this website).</i>
             </p>
             <Link href="/about">
-              <a className="text-blue-500 hover:underline">More about me »</a>
+              <a>More about me »</a>
             </Link>
+          </div>
+          <div className="hidden w-1/2 bg-primary lg:flex items-center justify-center">
+            <div className="bg-secondary dark:bg-secondary-dark w-2/5 h-1/2 rounded-lg shadow-xl">
+              <div className="bg-primary bg-opacity-80 h-1/3"></div>
+              <div className="-mt-16">
+                <Image
+                  src="/an/images/vidushan.jpg"
+                  alt="A photo of myself."
+                  className="rounded-full"
+                  width="130"
+                  height="130"
+                />
+              </div>
+            </div>
           </div>
         </section>
         <BlogIndex />

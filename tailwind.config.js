@@ -8,6 +8,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#2C2C42",
+        secondary: {
+          DEFAULT: "#ffffff",
+          dark: "#393e41",
+        },
+        tertiary: {
+          DEFAULT: "#C7B9B9",
+          dark: "#ffffff",
+        },
+        quaternary: "#120303",
+      },
       fontFamily: {
         heading: ["Sintony", "sans-serif"],
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
@@ -15,23 +27,17 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            color: theme("colors.primary.DEFAULT"),
             h1: {
-              fontFamily: theme("fontFamily.heading").join(", "),
+              color: theme("colors.primary.DEFAULT"),
             },
-            h2: {
-              fontFamily: theme("fontFamily.heading").join(", "),
-            },
-            h3: {
-              fontFamily: theme("fontFamily.heading").join(", "),
-            },
-            h4: {
-              fontFamily: theme("fontFamily.heading").join(", "),
-            },
-            h5: {
-              fontFamily: theme("fontFamily.heading").join(", "),
-            },
-            h6: {
-              fontFamily: theme("fontFamily.heading").join(", "),
+          },
+        },
+        dark: {
+          css: {
+            color: theme("colors.tertiary.dark"),
+            h1: {
+              color: theme("colors.tertiary.dark"),
             },
           },
         },
@@ -39,7 +45,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      typography: ["dark"],
+    },
   },
   plugins: [require("@tailwindcss/typography")],
   darkMode: "class",
