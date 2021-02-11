@@ -6,7 +6,7 @@ import styles from "./footer.module.css";
 export class footer extends Component {
   render() {
     return (
-      <footer className="text-gray-700 body-font bg-gray-100 dark:text-gray-400 dark:bg-gray-900">
+      <footer className="text-primary bg-primary bg-opacity-20 dark:bg-gray-900">
         <div className="container p-4 mx-auto flex items-center justify-between flex-col lg:flex-row">
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 lg:mb-0">
             © 2020 Vidushan Chooriyakumaran

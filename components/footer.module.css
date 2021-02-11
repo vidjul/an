@@ -8,5 +8,5 @@
 }
 
 .social:hover {
-  @apply text-blue-500;
+  @apply text-primary;
 }
