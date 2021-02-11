@@ -21,7 +21,7 @@ export default function IndexPage() {
       <Nav />
       <div className="container mx-auto bg-secondary dark:bg-secondary-dark">
         <section className="text-center flex h-screen">
-          <div className="my-auto lg:w-1/2 prose lg:prose-xl dark:prose-dark">
+          <div className="m-auto lg:w-1/2 prose lg:prose-xl dark:prose-dark">
             <div className="m-8 lg:hidden">
               <Image
                 src="/an/images/vidushan.jpg"
