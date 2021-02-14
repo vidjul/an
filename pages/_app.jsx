@@ -20,6 +20,8 @@ import "@fontsource/rubik";
 import "@fontsource/sintony";
 import "@fontsource/poppins";
 
+import "../styles/prism.css";
+
 config.autoAddCss = false;
 library.add(
   fab,
