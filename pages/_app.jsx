@@ -6,7 +6,9 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
   faAdjust,
   faArrowRight,
+  faAt,
   faCalendar,
+  faEnvelope,
   faHamburger,
   faHourglassHalf,
 } from "@fortawesome/free-solid-svg-icons";
@@ -25,7 +27,8 @@ library.add(
   faHourglassHalf,
   faCalendar,
   faHamburger,
-  faAdjust
+  faAdjust,
+  faEnvelope
 );
 
 function MyApp({ Component, pageProps }) {
