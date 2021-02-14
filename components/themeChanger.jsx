@@ -10,7 +10,8 @@ export default function themeChanger() {
       <button
         type="button"
         className="flex items-center py-2 px-3 text-primary rounded border border-primary"
-        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        // onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        onClick={() => console.log("Dark mode is broken at the moment, sorry!")}
       >
         <FontAwesomeIcon icon="adjust" />
       </button>
