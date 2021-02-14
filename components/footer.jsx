@@ -6,9 +6,9 @@ import styles from "./footer.module.css";
 export class footer extends Component {
   render() {
     return (
-      <footer className="text-primary bg-primary bg-opacity-20 dark:bg-gray-900">
+      <footer className="text-primary bg-tertiary">
         <div className="container p-4 mx-auto flex items-center justify-between flex-col lg:flex-row">
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 lg:mb-0">
+          <p className="text-sm text-primary dark:text-gray-400 mb-2 lg:mb-0">
             © 2020 Vidushan Chooriyakumaran
           </p>
           <span className="inline-flex">
