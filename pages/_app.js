@@ -4,8 +4,10 @@ import "../styles/globals.css";
 import "typeface-lora";
 import "typeface-montserrat";
 
+import { appWithTranslation } from "next-i18next";
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
