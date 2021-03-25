@@ -1,4 +1,5 @@
 import Head from "next/head";
+import MiniBio from "../components/MiniBio";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
 
       <main className="prose lg:prose-xl">
         <h1>Hi, I'm Vidushan!</h1>
-        <p>Welcome to my website.</p>
+        <MiniBio />
       </main>
     </div>
   );
