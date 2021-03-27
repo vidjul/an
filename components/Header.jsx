@@ -7,7 +7,7 @@ export default function Header() {
   const router = useRouter();
 
   return (
-    <nav className="h-16 px-8 py-4 shadow-lg">
+    <nav className="h-16 px-8 py-4 shadow-lg sticky top-0 w-full bg-white">
       <span className="font-logo font-semibold text-lg">
         vidu.sh
         <Link href="/">

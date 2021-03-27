@@ -17,16 +17,16 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="container mx-auto w-3/5 my-16">
-        <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <main className="prose lg:prose-xl">
+      <div className="container mx-auto w-1/2">
+        <div className="prose lg:prose-xl">
           <h1>{t("introTitle")}</h1>
           <MiniBio />
-        </main>
+        </div>
       </div>
     </Layout>
   );
