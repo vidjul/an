@@ -1,8 +1,10 @@
 import "../styles/globals.css";
 
 /** FONTS */
-import "typeface-lora";
-import "typeface-montserrat";
+import "@fontsource/lora";
+import "@fontsource/lora/400-italic.css";
+import "@fontsource/montserrat";
+import "@fontsource/roboto";
 
 import { appWithTranslation } from "next-i18next";
 

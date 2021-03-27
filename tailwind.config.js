@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         heading: "Lora",
         body: "Montserrat",
+        logo: "Roboto",
       },
     },
   },
