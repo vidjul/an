@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 import Logo from "./Logo";
 
 export default function Header() {
   const router = useRouter();
+  const { t } = useTranslation("common");
 
   return (
     <div class="container mx-auto border-b-1 p-5 sticky top-0 shadow-sm">
@@ -15,8 +17,8 @@ export default function Header() {
         </Link>
         <ul class="flex flex-row">
           <li class="pr-5">
-            <Link href="/about">
-              <a>About</a>
+            <Link href={`/${t("aboutLink")}`}>
+              <a>{t("header.about")}</a>
             </Link>
           </li>
           <li className="pr-5">
