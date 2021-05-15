@@ -8,21 +8,21 @@ export default function Header() {
   const { t } = useTranslation("common");
 
   return (
-    <div class="container mx-auto border-b-1 p-5 sticky top-0 shadow-sm">
-      <nav class="flex justify-between">
+    <div className="container mx-auto border-b-1 p-5 sticky top-0 shadow-sm">
+      <nav className="flex justify-between">
         <Link href="/">
           <a>
             <Logo />
           </a>
         </Link>
-        <ul class="flex flex-row">
-          <li class="pr-5">
-            <Link href={`/${t("aboutLink")}`}>
+        <ul className="flex flex-row">
+          <li className="pr-5">
+            <Link href={`/${t("links:about")}`}>
               <a>{t("header.about")}</a>
             </Link>
           </li>
           <li className="pr-5">
-            <Link href="" locale={router.locale === "en" ? "fr" : "en"}>
+            <Link href="/" locale={router.locale === "en" ? "fr" : "en"}>
               <a>{router.locale.toUpperCase()}</a>
             </Link>
           </li>
