@@ -34,7 +34,7 @@ export default function Home({ posts }) {
           <div className="prose lg:prose-xl">
             <h1>{t("introTitle")}</h1>
             <MiniBio />
-            <Link href={`/${t("aboutLink")}`}>
+            <Link href={`/${t("links:about")}`}>
               <a>{t("about")}</a>
             </Link>
           </div>
