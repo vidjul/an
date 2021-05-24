@@ -8,7 +8,7 @@ export default function Header() {
   const { t } = useTranslation("common");
 
   return (
-    <div className="container mx-auto my-0 p-8 sticky top-0 max-w-4xl">
+    <div className="container mx-auto my-0 p-8 sticky top-0 max-w-4xl z-10 bg-white">
       <nav className="flex justify-between">
         <Link href="/">
           <a>
