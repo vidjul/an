@@ -12,6 +12,7 @@
     "@fontsource/montserrat": "^4.2.2",
     "@fontsource/roboto": "^4.2.2",
     "dayjs": "^1.10.4",
+    "glob": "^7.1.7",
     "gray-matter": "^4.0.3",
     "next": "10.0.9",
     "next-i18next": "^8.1.2",
