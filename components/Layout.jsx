@@ -1,11 +1,10 @@
-import React from "react";
 import Header from "./Header";
 
 export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="container mx-auto max-w-2xl">{children}</main>
     </>
   );
 }

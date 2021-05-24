@@ -6,7 +6,6 @@ import { fetchAPI } from "../lib/api";
 import Link from "next/link";
 
 import MiniBio from "../components/MiniBio";
-import Header from "../components/Header";
 import Layout from "../components/Layout";
 
 export const getStaticProps = async ({ locale }) => {
@@ -15,7 +14,7 @@ export const getStaticProps = async ({ locale }) => {
   return {
     props: {
       posts,
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "links"])),
     },
   };
 };
