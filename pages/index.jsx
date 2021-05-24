@@ -29,15 +29,13 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container mx-auto">
-        <div className="flex justify-center items-center h-screen">
-          <div className="prose lg:prose-xl">
-            <h1>{t("introTitle")}</h1>
-            <MiniBio />
-            <Link href={`/${t("links:about")}`}>
-              <a>{t("about")}</a>
-            </Link>
-          </div>
+      <div>
+        <div className="prose lg:prose-xl">
+          <h1>{t("introTitle")}</h1>
+          <MiniBio />
+          <Link href={`/${t("links:about")}`}>
+            <a>{t("about")}</a>
+          </Link>
         </div>
 
         <div>
