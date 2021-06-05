@@ -10,6 +10,7 @@
   "dependencies": {
     "@fontsource/lora": "^4.2.2",
     "@fontsource/montserrat": "^4.2.2",
+    "@fontsource/quicksand": "^4.3.0",
     "@fontsource/roboto": "^4.2.2",
     "dayjs": "^1.10.4",
     "glob": "^7.1.7",

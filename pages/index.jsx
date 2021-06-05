@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -7,9 +9,10 @@ import Link from "next/link";
 
 import MiniBio from "../components/MiniBio";
 import Layout from "../components/Layout";
+import LatestPosts from "../components/LatestPosts";
 
 export const getStaticProps = async ({ locale }) => {
-  const posts = await fetchAPI("/articles");
+  const posts = await fetchAPI(`/articles?_locale=${locale}`);
 
   return {
     props: {
@@ -38,20 +41,12 @@ export default function Home({ posts }) {
           </Link>
         </div>
 
-        <div>
-          <ul>
-            {posts.map((post) => {
-              return (
-                <li index={post.id}>
-                  <Link href={`posts/${post.slug}`}>
-                    <a>{post.title}</a>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <LatestPosts posts={posts} />
       </div>
     </Layout>
   );
 }
+
+Home.propTypes = {
+  posts: PropTypes.array,
+};

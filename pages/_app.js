@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 
 /** FONTS */
-import "@fontsource/lora";
+import "@fontsource/quicksand";
 import "@fontsource/lora/400-italic.css";
 import "@fontsource/montserrat";
 import "@fontsource/roboto";

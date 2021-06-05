@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: "Lora",
+        heading: "Quicksand",
         body: "Montserrat",
         logo: "Roboto",
       },
