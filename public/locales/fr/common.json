@@ -3,6 +3,9 @@
   "header": {
     "about": "A propos"
   },
+  "footer": {
+    "thanks": "Merci pour la visite !"
+  },
   "introTitle": "Salut, moi c'est Vidushan !",
   "miniBio": "J'ai {{age}} ans et je suis un ingénieur en informatique situé à Paris. J'adore Final Fantasy 7, Death Note et bricoler des choses avec mon ordinateur (comme ce site)."
 }
