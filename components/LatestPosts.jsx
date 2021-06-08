@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 export default function LatestPosts({ posts }) {
+  const { t } = useTranslation("common");
+
   return (
     <div className="my-8">
-      <h1 className="text-4xl font-bold mb-4">Last posts</h1>
+      <h1 className="text-4xl font-bold mb-4">{t("lastPosts")}</h1>
       <ul>
         {posts.map((post) => {
           return (
