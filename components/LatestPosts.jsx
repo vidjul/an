@@ -9,6 +9,7 @@ export default function LatestPosts({ posts }) {
   return (
     <div className="my-8">
       <h1 className="text-4xl font-bold mb-4">{t("lastPosts")}</h1>
+      {posts.length === 0 && <p className="italic">{t("noPosts")}</p>}
       <ul>
         {posts.map((post) => {
           return (
