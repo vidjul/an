@@ -1,5 +1,6 @@
 ---
 title: A propos
+description: Pour en savoir plus sur moi !
 ---
 
 ## Qui-suis-je ?

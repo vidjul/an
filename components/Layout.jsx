@@ -1,16 +1,14 @@
 import PropTypes from "prop-types";
 
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 import Footer from "./Footer";
 import Header from "./Header";
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, title, description }) {
   return (
     <>
-      <Head>
-        <title>{title} - Vidushan C.</title>
-      </Head>
+      <NextSeo title={title} description={description}></NextSeo>
       <Header />
       <main className="px-8">
         <div className="container mx-auto max-w-2xl">{children}</div>
@@ -23,4 +21,5 @@ export default function Layout({ children, title }) {
 Layout.propTypes = {
   children: PropTypes.element,
   title: PropTypes.string,
+  description: PropTypes.string,
 };

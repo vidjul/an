@@ -1,5 +1,6 @@
 ---
 title: About
+description: Some more details about me!
 ---
 
 ## Who I am

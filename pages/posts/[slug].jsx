@@ -39,7 +39,7 @@ export const getStaticProps = async ({ locale, params }) => {
 
 export default function slug({ post }) {
   return (
-    <Layout title={post.title}>
+    <Layout title={post.title} description={post.description}>
       <ReactMarkdown className="prose lg:prose-xl text-justify">
         {post.content}
       </ReactMarkdown>
