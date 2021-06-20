@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 
-import { Container } from "next/app";
-
 import { DefaultSeo } from "next-seo";
 
 import "../styles/globals.css";
@@ -16,10 +14,10 @@ import { appWithTranslation } from "next-i18next";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Container>
+    <>
       <DefaultSeo titleTemplate="%s | Vidushan C." />
       <Component {...pageProps} />;
-    </Container>
+    </>
   );
 }
 
