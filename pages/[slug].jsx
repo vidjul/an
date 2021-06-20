@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
+import PropTypes from "prop-types";
+import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import matter from "gray-matter";
 
 import { fetchLocal } from "../lib/local";
 import Layout from "../components/Layout";
@@ -26,30 +26,32 @@ export const getStaticProps = async (context) => {
   const { locale, defaultLocale } = context;
 
   // Import our .md file using the `slug` from the URL
-  const content = await import(
-    `../content/${locale || defaultLocale}/${slug}.md`
-  );
+  const file = await import(`../content/${locale || defaultLocale}/${slug}.md`);
 
-  // // Parse .md data through `matter`
-  // const data = matter(content.default);
+  // Parse .md data through `matter`
+  const { content, data } = matter(file.default);
 
   // Pass data to our component props
   return {
     props: {
-      content: content.default,
+      content,
+      data,
       ...(await serverSideTranslations(locale, ["common", "links"])),
     },
   };
 };
 
-const Post = ({ content }) => {
-  const router = useRouter();
-
+const Post = ({ content, data }) => {
   return (
-    <Layout>
+    <Layout title={data.title}>
       <ReactMarkdown className="prose lg:prose-xl">{content}</ReactMarkdown>
     </Layout>
   );
+};
+
+Post.propTypes = {
+  content: PropTypes.string,
+  data: PropTypes.object,
 };
 
 export default Post;

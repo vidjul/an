@@ -1,5 +1,3 @@
-import React from "react";
-
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { fetchAPI } from "../../lib/api";
@@ -41,7 +39,7 @@ export const getStaticProps = async ({ locale, params }) => {
 
 export default function slug({ post }) {
   return (
-    <Layout>
+    <Layout title={post.title}>
       <ReactMarkdown className="prose lg:prose-xl text-justify">
         {post.content}
       </ReactMarkdown>
