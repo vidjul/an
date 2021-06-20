@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Logo() {
   return (
     <span className="font-logo font-bold text-xl">

@@ -1,5 +1,3 @@
-import React from "react";
-
 import * as dayjs from "dayjs";
 import { useTranslation } from "next-i18next";
 
