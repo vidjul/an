@@ -21,7 +21,7 @@ export default function Header() {
               <a>{t("header.about")}</a>
             </Link>
           </li>
-          <li className="pr-5">
+          <li>
             <Link href="/" locale={router.locale === "en" ? "fr" : "en"}>
               <a>{router.locale.toUpperCase()}</a>
             </Link>
