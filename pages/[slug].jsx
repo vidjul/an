@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
         params: {
           slug: data.slug,
         },
-        locale: data.locale,
+        locale: data.locale !== "en" ? data.locale : null,
       };
     }),
     fallback: false,
