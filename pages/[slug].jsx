@@ -6,7 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { fetchLocal } from "../lib/local";
 import Layout from "../components/Layout";
 
-export const getStaticPaths = async () => {
+export const getStaticPaths = async ({ defaultLocale }) => {
   const localData = fetchLocal();
   return {
     paths: localData.map((data) => {
@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
         params: {
           slug: data.slug,
         },
-        locale: data.locale !== "en" ? data.locale : null,
+        locale: data.locale !== defaultLocale ? data.locale : void 0,
       };
     }),
     fallback: false,
