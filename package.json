@@ -16,7 +16,8 @@
     "sass": "^1.26.10"
   },
   "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.0"
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.7",
+    "tailwindcss": "^3.0.23"
   }
 }
