@@ -7,7 +7,7 @@ import { MDXRemote } from 'next-mdx-remote'
 
 export default function PostPage({ source }) {
   return (
-    <div className="wrapper">
+    <div className="prose lg:prose-xl">
       <MDXRemote {...source} />
     </div>
   )
