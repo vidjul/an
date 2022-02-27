@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { frontMatter as blogPages } from "../pages/posts/*.mdx";
+
+
+const blogPages = [];
 
 export default function blogIndex() {
   return (
@@ -27,7 +29,7 @@ export default function blogIndex() {
                     {page.title}
                   </h2>
                   <p className="leading-relaxed">{page.description}</p>
-                  <Link href={formatPath(page.__resourcePath)}>
+                  <Link href={page.__resourcePath}>
                     <a className="text-green-500 inline-flex items-center mt-4">
                       Learn More
                       <svg
@@ -55,6 +57,3 @@ export default function blogIndex() {
   );
 }
 
-function formatPath(p) {
-  return p.replace(/\.mdx$/, "");
-}
