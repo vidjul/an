@@ -5,17 +5,21 @@ import {
 
 import { MDXRemote } from 'next-mdx-remote'
 
-export default function PostPage({ source }) {
+import Layout from "../../components/layout";
+
+export default function PostPage({ source, seo }) {
   return (
-    <div className="prose lg:prose-xl">
-      <MDXRemote {...source} />
-    </div>
+    <Layout seo={seo}>
+      <div className="prose lg:prose-xl">
+        <MDXRemote {...source} />
+      </div>
+    </Layout>
   )
-}
+};
 
 export async function getStaticProps({ params }) {
-  const { mdxSource } = await getPostBySlug(params.slug);
-  return { props: { source: mdxSource } }
+  const { mdxSource, data } = await getPostBySlug(params.slug);
+  return { props: { source: mdxSource, seo: { title: data.title, description: data.description } } }
 }
 
 export async function getStaticPaths() {

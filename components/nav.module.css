@@ -7,7 +7,6 @@
 .navlink {
   @apply block;
   @apply mt-4;
-  @apply mr-10;
   @apply text-teal-900;
 }
 

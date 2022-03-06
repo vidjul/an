@@ -1,19 +1,20 @@
 import Link from "next/link";
 import Head from "next/head";
-import { NextSeo } from "next-seo";
 
-import Nav from "../components/nav";
-import Footer from "../components/footer";
+import Layout from "../components/layout";
 import BlogIndex from "../components/blogIndex";
 import Image from "../components/image";
+
+const layoutProps = {
+  seo: {
+    title: 'Vidushan Chooriyakumaran | Home',
+    description: 'Vidushan Chooriyakumaran\'s personal website.',
+  },
+};
 
 export default function IndexPage() {
   return (
     <>
-      <NextSeo
-        title="Vidushan Chooriyakumaran | Home"
-        description="Vidushan Chooriyakumaran's personal website."
-      />
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -46,29 +47,29 @@ export default function IndexPage() {
           href="/an/android-chrome-512x512.png"
         />
       </Head>
-      <Nav />
-      <div className="container mx-auto px-4">
-        <section className="py-12 px-4 text-center">
-          <div className="w-full max-w-2xl mx-auto">
-            <Image
-              src="/images/vidushan.jpg"
-              alt="A photo of myself."
-              className="rounded-full h-48 w-48 mx-auto"
-            />
-            <h2 className="mt-4 font-heading text-3xl">Hey, I'm Vidushan!</h2>
-            <p className="my-2">
-              I'm a 24 years old software engineer based in Paris. I love{" "}
-              <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
-              <i>Testing stuffs on computer (like crafting this website).</i>
-            </p>
-            <Link href="/about">
-              <a className="text-teal-700 hover:underline">More about me »</a>
-            </Link>
-          </div>
-        </section>
-        <BlogIndex />
-      </div>
-      <Footer />
+      <Layout seo={layoutProps.seo}>
+        <div className="container mx-auto px-4">
+          <section className="py-12 px-4 text-center">
+            <div className="w-full max-w-2xl mx-auto">
+              <Image
+                src="/images/vidushan.jpg"
+                alt="A photo of myself."
+                className="rounded-full h-48 w-48 mx-auto"
+              />
+              <h2 className="mt-4 font-heading text-3xl">Hey, I'm Vidushan!</h2>
+              <p className="my-2">
+                I'm a 24 years old software engineer based in Paris. I love{" "}
+                <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
+                <i>Testing stuffs on computer (like crafting this website).</i>
+              </p>
+              <Link href="/about">
+                <a className="text-teal-700 hover:underline">More about me »</a>
+              </Link>
+            </div>
+          </section>
+          <BlogIndex />
+        </div>
+      </Layout>
     </>
   );
 }
