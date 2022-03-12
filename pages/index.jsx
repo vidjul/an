@@ -69,9 +69,9 @@ export default function IndexPage({ postsData }) {
                 height={192}
                 width={192}
               />
-              <h2 className="mt-4 font-heading text-3xl">Hey, I'm Vidushan!</h2>
+              <h2 className="mt-4 font-heading text-3xl">Hey, I&apos;m Vidushan!</h2>
               <p className="my-2">
-                I'm a 26 years old software engineer based in Paris. I love{" "}
+                I&apos;m a 26 years old software engineer based in Paris. I love{" "}
                 <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
                 <i>
                   Testing stuffs on a computer (like crafting this website).
