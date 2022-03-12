@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-
-export default function blogIndex({posts}) {
+export default function blogIndex({ posts }) {
   return (
     <section className="text-gray-700 body-font overflow-hidden">
       <h3>Blog entries</h3>
@@ -14,9 +13,7 @@ export default function blogIndex({posts}) {
                 <span className="tracking-widest font-medium title-font text-gray-900 uppercase">
                   {page.category}
                 </span>
-                <span className="mt-1 text-gray-500 text-sm">
-                  {page.date}
-                </span>
+                <span className="mt-1 text-gray-500 text-sm">{page.date}</span>
                 <span className="mt-1 text-gray-700 text-sm">
                   {page.readingTime?.text}
                 </span>
@@ -27,9 +24,7 @@ export default function blogIndex({posts}) {
                 </h2>
                 <p className="leading-relaxed">{page.description}</p>
                 <Link href={page.url}>
-                  <a className="text-teal-700 hover:underline">
-                    Learn More »
-                  </a>
+                  <a className="text-teal-700 hover:underline">Learn More »</a>
                 </Link>
               </div>
             </div>
@@ -40,4 +35,3 @@ export default function blogIndex({posts}) {
     </section>
   );
 }
-

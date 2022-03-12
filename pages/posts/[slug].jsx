@@ -1,9 +1,6 @@
-import {
-  getPostBySlug,
-  postFilePaths,
-} from '../../utils/mdx';
+import { getPostBySlug, postFilePaths } from "../../utils/mdx";
 
-import { MDXRemote } from 'next-mdx-remote'
+import { MDXRemote } from "next-mdx-remote";
 
 import Layout from "../../components/layout";
 
@@ -14,23 +11,28 @@ export default function PostPage({ source, seo }) {
         <MDXRemote {...source} />
       </div>
     </Layout>
-  )
-};
+  );
+}
 
 export async function getStaticProps({ params }) {
   const { mdxSource, data } = await getPostBySlug(params.slug);
-  return { props: { source: mdxSource, seo: { title: data.title, description: data.description } } }
+  return {
+    props: {
+      source: mdxSource,
+      seo: { title: data.title, description: data.description },
+    },
+  };
 }
 
 export async function getStaticPaths() {
   const paths = postFilePaths
     // Remove file extensions for page paths
-    .map((path) => path.replace(/\.mdx?$/, ''))
+    .map((path) => path.replace(/\.mdx?$/, ""))
     // Map the path into the static paths object required by Next.js
     .map((slug) => ({ params: { slug } }));
 
   return {
     paths,
     fallback: false,
-  }
+  };
 }

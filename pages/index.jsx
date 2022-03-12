@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 
-import { getPosts } from '../utils/mdx';
+import { getPosts } from "../utils/mdx";
 
 import Layout from "../components/layout";
 import BlogIndex from "../components/blogIndex";
@@ -9,21 +9,21 @@ import Image from "../components/image";
 
 const layoutProps = {
   seo: {
-    title: 'Vidushan Chooriyakumaran | Home',
-    description: 'Vidushan Chooriyakumaran\'s personal website.',
+    title: "Vidushan Chooriyakumaran | Home",
+    description: "Vidushan Chooriyakumaran's personal website.",
   },
 };
 
 export function getStaticProps() {
-  const postsData = getPosts().map(post => post.data);
+  const postsData = getPosts().map((post) => post.data);
   return {
     props: {
       postsData,
-    }
+    },
   };
 }
 
-export default function IndexPage({postsData}) {
+export default function IndexPage({ postsData }) {
   return (
     <>
       <Head>
@@ -71,7 +71,9 @@ export default function IndexPage({postsData}) {
               <p className="my-2">
                 I'm a 26 years old software engineer based in Paris. I love{" "}
                 <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
-                <i>Testing stuffs on a computer (like crafting this website).</i>
+                <i>
+                  Testing stuffs on a computer (like crafting this website).
+                </i>
               </p>
               <Link href="/about">
                 <a className="text-teal-700 hover:underline">More about me »</a>

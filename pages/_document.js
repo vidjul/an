@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
   render() {
@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
         <Head>
           <script
             async
-            src={'https://www.googletagmanager.com/gtag/js?id=UA-133354403-1'}
+            src={"https://www.googletagmanager.com/gtag/js?id=UA-133354403-1"}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -27,6 +27,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
