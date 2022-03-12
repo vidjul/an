@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 import { getPosts } from "../utils/mdx";
 
 import Layout from "../components/layout";
 import BlogIndex from "../components/blogIndex";
-import Image from "../components/image";
 
 const layoutProps = {
   seo: {
@@ -63,9 +63,11 @@ export default function IndexPage({ postsData }) {
           <section className="py-12 px-4 text-center">
             <div className="w-full max-w-2xl mx-auto">
               <Image
-                src="/images/vidushan.jpg"
+                src="/an/images/vidushan.jpg"
                 alt="A photo of myself."
-                className="rounded-full h-48 w-48 mx-auto"
+                className="rounded-full mx-auto"
+                height={192}
+                width={192}
               />
               <h2 className="mt-4 font-heading text-3xl">Hey, I'm Vidushan!</h2>
               <p className="my-2">
