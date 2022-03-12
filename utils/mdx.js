@@ -12,15 +12,23 @@ export const postFilePaths = fs
   // Only include md(x) files
   .filter((path) => /\.mdx?$/.test(path));
 
+export const sortPostsByDate = (posts) => {
+  return posts.sort((a, b) => {
+    const aDate = new Date(a.data.date);
+    const bDate = new Date(b.data.date);
+    return bDate - aDate;
+  });
+};
+
 export const getPosts = () => {
   let posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-    const { content, data } = matter(source);
+    const { data } = matter(source);
+
+    data.url = `/posts/${filePath.replace('.mdx', '')}`;
 
     return {
-      content,
       data,
-      filePath,
     };
   });
 

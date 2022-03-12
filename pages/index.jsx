@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Head from "next/head";
 
+import { getPosts } from '../utils/mdx';
+
 import Layout from "../components/layout";
 import BlogIndex from "../components/blogIndex";
 import Image from "../components/image";
@@ -12,7 +14,17 @@ const layoutProps = {
   },
 };
 
-export default function IndexPage() {
+export function getStaticProps() {
+  const postsData = getPosts().map(post => post.data);
+  console.log(postsData);
+  return {
+    props: {
+      postsData,
+    }
+  };
+}
+
+export default function IndexPage({postsData}) {
   return (
     <>
       <Head>
@@ -48,7 +60,7 @@ export default function IndexPage() {
         />
       </Head>
       <Layout seo={layoutProps.seo}>
-        <div className="container mx-auto px-4">
+        <>
           <section className="py-12 px-4 text-center">
             <div className="w-full max-w-2xl mx-auto">
               <Image
@@ -67,8 +79,8 @@ export default function IndexPage() {
               </Link>
             </div>
           </section>
-          <BlogIndex />
-        </div>
+          <BlogIndex posts={postsData} />
+        </>
       </Layout>
     </>
   );
