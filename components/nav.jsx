@@ -21,20 +21,15 @@ export default class nav extends Component {
   }
 
   render() {
-    const links = [
-      { href: "https://github.com/vercel/next.js", label: "GitHub" },
-      { href: "https://nextjs.org/docs", label: "Docs" },
-    ];
-
-    let menuClass = "lg:order-3 lg:block w-full lg:w-2/5 lg:text-right";
+    let menuClass = "lg:flex justify-end gap-10";
 
     if (!this.state.menuIsOpen) {
       menuClass += " hidden";
     }
 
     return (
-      <div className="sticky top-0 w-full bg-white shadow-xs">
-        <nav className="container mx-auto flex flex-wrap items-center justify-between p-4">
+      <div className="py-6 sticky top-0 bg-white z-50">
+        <nav className="flex flex-wrap items-center justify-between">
           <div className="w-auto">
             <Link href="/">
               <a className={styles.logo}>

@@ -1,19 +1,31 @@
 import Link from "next/link";
 import Head from "next/head";
-import { NextSeo } from "next-seo";
+import Image from "next/image";
 
-import Nav from "../components/nav";
-import Footer from "../components/footer";
+import { getPosts } from "../utils/mdx";
+
+import Layout from "../components/layout";
 import BlogIndex from "../components/blogIndex";
-import Image from "../components/image";
 
-export default function IndexPage() {
+const layoutProps = {
+  seo: {
+    title: "Vidushan Chooriyakumaran | Home",
+    description: "Vidushan Chooriyakumaran's personal website.",
+  },
+};
+
+export function getStaticProps() {
+  const postsData = getPosts().map((post) => post.data);
+  return {
+    props: {
+      postsData,
+    },
+  };
+}
+
+export default function IndexPage({ postsData }) {
   return (
     <>
-      <NextSeo
-        title="Vidushan Chooriyakumaran | Home"
-        description="Vidushan Chooriyakumaran's personal website."
-      />
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -46,29 +58,33 @@ export default function IndexPage() {
           href="/an/android-chrome-512x512.png"
         />
       </Head>
-      <Nav />
-      <div className="container mx-auto px-4">
-        <section className="py-12 px-4 text-center">
-          <div className="w-full max-w-2xl mx-auto">
-            <Image
-              src="/images/vidushan.jpg"
-              alt="A photo of myself."
-              className="rounded-full h-48 w-48 mx-auto"
-            />
-            <h2 className="mt-4 font-heading text-3xl">Hey, I'm Vidushan!</h2>
-            <p className="my-2">
-              I'm a 24 years old software engineer based in Paris. I love{" "}
-              <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
-              <i>Testing stuffs on computer (like crafting this website).</i>
-            </p>
-            <Link href="/about">
-              <a className="text-teal-700 hover:underline">More about me »</a>
-            </Link>
-          </div>
-        </section>
-        <BlogIndex />
-      </div>
-      <Footer />
+      <Layout seo={layoutProps.seo}>
+        <>
+          <section className="py-12 px-4 text-center">
+            <div className="w-full max-w-2xl mx-auto">
+              <Image
+                src="/an/images/vidushan.jpg"
+                alt="A photo of myself."
+                className="rounded-full mx-auto"
+                height={192}
+                width={192}
+              />
+              <h2 className="mt-4 font-heading text-3xl">Hey, I&apos;m Vidushan!</h2>
+              <p className="my-2">
+                I&apos;m a 26 years old software engineer based in Paris. I love{" "}
+                <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
+                <i>
+                  Testing stuffs on a computer (like crafting this website).
+                </i>
+              </p>
+              <Link href="/about">
+                <a className="text-teal-700 hover:underline">More about me »</a>
+              </Link>
+            </div>
+          </section>
+          <BlogIndex posts={postsData} />
+        </>
+      </Layout>
     </>
   );
 }
