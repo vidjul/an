@@ -28,7 +28,7 @@ export default class nav extends Component {
     }
 
     return (
-      <div className="sticky top-0 w-full bg-white shadow-xs py-4">
+      <div className="py-6 sticky top-0 bg-white">
         <nav className="flex flex-wrap items-center justify-between">
           <div className="w-auto">
             <Link href="/">

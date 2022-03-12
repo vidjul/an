@@ -16,9 +16,7 @@ export default function Layout({ children, seo }) {
       <div className="container mx-auto px-4 max-w-4xl">
         <Nav />
         <div className={styles.layout}>
-          <div className="py-8 mb-4">
-            {children}
-          </div>
+          {children}
         </div>
         <Footer />
       </div>
