@@ -8,6 +8,7 @@ export default function PostPage({ source, seo }) {
   return (
     <Layout seo={seo}>
       <div className="prose lg:prose-xl">
+        <h1>{seo.title}</h1>
         <MDXRemote {...source} />
       </div>
     </Layout>
