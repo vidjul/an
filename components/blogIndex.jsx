@@ -27,8 +27,8 @@ export default function blogIndex({posts}) {
                 </h2>
                 <p className="leading-relaxed">{page.description}</p>
                 <Link href={page.url}>
-                  <a className="text-green-500 inline-flex items-center mt-4">
-                    Learn More
+                  <a className="text-teal-700 hover:underline">
+                    Learn More »
                   </a>
                 </Link>
               </div>
