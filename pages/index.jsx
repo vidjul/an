@@ -70,9 +70,9 @@ export default function IndexPage({postsData}) {
               />
               <h2 className="mt-4 font-heading text-3xl">Hey, I'm Vidushan!</h2>
               <p className="my-2">
-                I'm a 24 years old software engineer based in Paris. I love{" "}
+                I'm a 26 years old software engineer based in Paris. I love{" "}
                 <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}
-                <i>Testing stuffs on computer (like crafting this website).</i>
+                <i>Testing stuffs on a computer (like crafting this website).</i>
               </p>
               <Link href="/about">
                 <a className="text-teal-700 hover:underline">More about me »</a>
