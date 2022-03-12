@@ -16,7 +16,6 @@ const layoutProps = {
 
 export function getStaticProps() {
   const postsData = getPosts().map(post => post.data);
-  console.log(postsData);
   return {
     props: {
       postsData,
