@@ -19,9 +19,10 @@ export default function AboutPage() {
           <p>
             Hello, I am Vidushan! 👋
             <br />
-            <br />I am a 26 years old Software Engineer based in Paris. When I&apos;m
-            not coding, I will usually spend my time playing video games,
-            watching anime, or sharing moments with my cousins and family.
+            <br />I am a 26 years old Software Engineer based in Paris. When
+            I&apos;m not coding, I will usually spend my time playing video
+            games, watching anime, or sharing moments with my cousins and
+            family.
           </p>
 
           <Link href="/cv.pdf">Résumé</Link>

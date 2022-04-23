@@ -28,7 +28,7 @@ export default class nav extends Component {
     }
 
     return (
-      <div className="py-6 sticky top-0 bg-white z-50">
+      <div className="sticky top-0 z-50 bg-white py-6">
         <nav className="flex flex-wrap items-center justify-between">
           <div className="w-auto">
             <Link href="/">
@@ -40,10 +40,10 @@ export default class nav extends Component {
           <div className="block lg:hidden">
             <button
               onClick={this.handleHamburgerClick}
-              className="flex items-center py-2 px-3 text-teal-500 rounded border border-teal-500"
+              className="flex items-center rounded border border-teal-500 py-2 px-3 text-teal-500"
             >
               <svg
-                className="fill-current h-3 w-3"
+                className="h-3 w-3 fill-current"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >

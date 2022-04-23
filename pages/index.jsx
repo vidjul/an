@@ -61,15 +61,17 @@ export default function IndexPage({ postsData }) {
       <Layout seo={layoutProps.seo}>
         <>
           <section className="py-12 px-4 text-center">
-            <div className="w-full max-w-2xl mx-auto">
+            <div className="mx-auto w-full max-w-2xl">
               <Image
                 src="/an/images/vidushan.jpg"
                 alt="A photo of myself."
-                className="rounded-full mx-auto"
+                className="mx-auto rounded-full"
                 height={192}
                 width={192}
               />
-              <h2 className="mt-4 font-heading text-3xl">Hey, I&apos;m Vidushan!</h2>
+              <h2 className="font-heading mt-4 text-3xl">
+                Hey, I&apos;m Vidushan!
+              </h2>
               <p className="my-2">
                 I&apos;m a 26 years old software engineer based in Paris. I love{" "}
                 <i>Final Fantasy 7</i>, <i>Death Note</i> and{" "}

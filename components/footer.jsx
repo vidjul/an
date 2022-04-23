@@ -7,11 +7,11 @@ export class footer extends Component {
   render() {
     return (
       <footer className="text-gray-700">
-        <div className="container py-8 mx-auto flex items-center sm:flex-row flex-col">
+        <div className="container mx-auto flex flex-col items-center py-8 sm:flex-row">
           <p className="text-sm text-gray-500">
             Thanks for passing by! - Vidushan C.
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <span className="mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
             <a className={styles.social} href="https://github.com/vidjul">
               <GitHub />
             </a>
