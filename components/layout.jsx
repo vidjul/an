@@ -4,8 +4,6 @@ import { NextSeo } from "next-seo";
 import Nav from "./nav";
 import Footer from "./footer";
 
-import styles from "./layout.module.scss";
-
 export default function Layout({ children, seo }) {
   return (
     <>
