@@ -13,7 +13,9 @@ export default function AboutPage() {
   return (
     <>
       <Layout seo={layoutProps.seo}>
-        <main className="prose lg:prose-xl">
+        <main className="prose mx-auto lg:prose-xl">
+          <h1>About</h1>
+
           <h2>Who I am</h2>
 
           <p>

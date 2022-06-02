@@ -12,7 +12,7 @@ export default function Layout({ children, seo }) {
       <NextSeo title={seo.title} description={seo.description} />
       <div className="container mx-auto max-w-4xl px-4">
         <Nav />
-        <div className={styles.layout}>{children}</div>
+        <>{children}</>
         <Footer />
       </div>
     </>

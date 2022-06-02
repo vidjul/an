@@ -19,13 +19,13 @@ export default function blogIndex({ posts }) {
                 </span>
               </div>
               <div className="md:flex-grow">
-                <h2 className="title-font mb-2 text-2xl font-medium text-gray-900">
-                  {page.title}
+                <h2 className="title-font mb-2 text-2xl font-medium text-gray-900 hover:text-green-500">
+                  <Link href={page.url}>
+                    <a>{page.title}</a>
+                  </Link>
                 </h2>
+
                 <p className="leading-relaxed">{page.description}</p>
-                <Link href={page.url}>
-                  <a className="text-teal-700 hover:underline">Learn More »</a>
-                </Link>
               </div>
             </div>
             <hr className="mx-auto" />

@@ -60,8 +60,8 @@ export default function IndexPage({ postsData }) {
       </Head>
       <Layout seo={layoutProps.seo}>
         <>
-          <section className="py-12 px-4 text-center">
-            <div className="mx-auto w-full max-w-2xl">
+          <section className="text-center">
+            <div className="mx-auto mb-12 w-full max-w-2xl">
               <Image
                 src="/an/images/vidushan.jpg"
                 alt="A photo of myself."
