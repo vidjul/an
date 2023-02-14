@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Twitter, Linkedin, GitHub } from "react-feather";
 
-import styles from "./footer.module.css";
-
 export class footer extends Component {
   render() {
     return (
@@ -12,14 +10,20 @@ export class footer extends Component {
             Thanks for passing by! - Vidushan C.
           </p>
           <span className="mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
-            <a className={styles.social} href="https://github.com/vidjul">
+            <a
+              className="ml-3 text-gray-500 hover:text-green-500"
+              href="https://github.com/vidjul"
+            >
               <GitHub />
             </a>
-            <a className={styles.social} href="https://twitter.com/vidushan_">
+            <a
+              className="ml-3 text-gray-500 hover:text-green-500"
+              href="https://twitter.com/vidushan_"
+            >
               <Twitter />
             </a>
             <a
-              className={styles.social}
+              className="ml-3 text-gray-500 hover:text-green-500"
               href="https://www.linkedin.com/in/c-vidushan/"
             >
               <Linkedin />
