@@ -21,7 +21,7 @@ export default function blogIndex({ posts }) {
               <div className="md:flex-grow">
                 <h2 className="title-font mb-2 text-2xl font-medium text-gray-900 hover:text-green-500">
                   <Link href={page.url}>
-                    <a>{page.title}</a>
+                    {page.title}
                   </Link>
                 </h2>
 

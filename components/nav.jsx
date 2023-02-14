@@ -31,10 +31,9 @@ export default class nav extends Component {
       <div className="sticky top-0 z-50 mb-8 bg-white py-6">
         <nav className="flex flex-wrap items-center justify-between">
           <div className="w-auto">
-            <Link href="/">
-              <a className={styles.logo}>
-                vidu.sh<span className="highlight">/an</span>
-              </a>
+            <Link href="/" className={styles.logo}>
+              vidu.sh<span className="highlight">/an</span>
+
             </Link>
           </div>
           <div className="block lg:hidden">
@@ -53,11 +52,11 @@ export default class nav extends Component {
             </button>
           </div>
           <div className={menuClass}>
-            <Link href="/">
-              <a className={styles.navlink}>Home</a>
+            <Link href="/" className={styles.navlink}>
+              Home
             </Link>
-            <Link href="/about">
-              <a className={styles.navlink}>About</a>
+            <Link href="/about" className={styles.navlink}>
+              About
             </Link>
           </div>
         </nav>
