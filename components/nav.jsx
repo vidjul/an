@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Link from "next/link";
-import styles from "./nav.module.css";
 
 export default class nav extends Component {
   constructor(props) {
@@ -31,9 +30,8 @@ export default class nav extends Component {
       <div className="sticky top-0 z-50 mb-8 bg-white py-6">
         <nav className="flex flex-wrap items-center justify-between">
           <div className="w-auto">
-            <Link href="/" className={styles.logo}>
+            <Link href="/" className="font-['Roboto'] text-xl font-semibold">
               vidu.sh<span className="highlight">/an</span>
-
             </Link>
           </div>
           <div className="block lg:hidden">
@@ -52,10 +50,16 @@ export default class nav extends Component {
             </button>
           </div>
           <div className={menuClass}>
-            <Link href="/" className={styles.navlink}>
+            <Link
+              href="/"
+              className="mt-4 block text-teal-900 hover:text-teal-700 lg:mt-0 lg:inline-block"
+            >
               Home
             </Link>
-            <Link href="/about" className={styles.navlink}>
+            <Link
+              href="/about"
+              className="mt-4 block text-teal-900 hover:text-teal-700 lg:mt-0 lg:inline-block"
+            >
               About
             </Link>
           </div>
