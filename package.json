@@ -14,7 +14,7 @@
     "next-seo": "^5.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-feather": "^2.0.9",
+    "react-feather": "^2.0.10",
     "reading-time": "^1.2.0",
     "sass": "^1.26.10"
   },
