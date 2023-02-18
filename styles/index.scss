@@ -1,36 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
 
 @tailwind base;
 @tailwind components;
-
-h1 {
-  font-family: "Roboto", sans-serif;
-  @apply text-xl;
-  @apply font-semibold;
-}
-
-h3 {
-  font-family: "Roboto", sans-serif;
-  @apply text-lg;
-  @apply text-green-500;
-  @apply font-bold;
-}
-
-p {
-  font-family: "Inter", sans-serif;
-  @apply text-gray-900;
-}
-
-span.highlight {
-  @apply text-green-500;
-}
-
-i {
-  @apply text-green-500;
-  @apply font-semibold;
-  font-style: initial;
-}
-
 @tailwind utilities;
 
 @import "duotone";

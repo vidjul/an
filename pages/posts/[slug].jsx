@@ -7,7 +7,7 @@ import Layout from "../../components/layout";
 export default function PostPage({ source, seo }) {
   return (
     <Layout seo={seo}>
-      <main className="prose mx-auto lg:prose-xl">
+      <main className="prose mx-auto prose-headings:font-display lg:prose-xl">
         <h1>{seo.title}</h1>
         <MDXRemote {...source} />
       </main>

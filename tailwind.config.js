@@ -4,6 +4,10 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Inter'],
+      display: ['Roboto']
+    },
     extend: {},
   },
   variants: {},
