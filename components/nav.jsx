@@ -31,7 +31,7 @@ export default class nav extends Component {
         <nav className="flex flex-wrap items-center justify-between">
           <div className="w-auto">
             <Link href="/" className="font-['Roboto'] text-xl font-semibold">
-              vidu.sh<span className="highlight">/an</span>
+              vidu.sh<span className="text-green-500">/an</span>
             </Link>
           </div>
           <div className="block lg:hidden">
