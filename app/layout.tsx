@@ -1,4 +1,4 @@
-import { Lato, Catamaran } from "@next/font/google";
+import { Lato, Catamaran } from "next/font/google";
 
 import "../styles/index.scss";
 
