@@ -51,10 +51,10 @@ export default function IndexPage() {
             height={192}
             width={192}
           />
-          <h2 className="font-heading mt-4 text-3xl">
+          <h2 className="mt-4 font-display text-3xl">
             Hey, I&apos;m Vidushan!
           </h2>
-          <p className="my-2">
+          <p className="my-2 text-lg">
             I&apos;m a 26 years old software engineer based in Paris. I love{" "}
             <i className="font-semibold not-italic text-green-500">
               Final Fantasy 7
@@ -68,7 +68,7 @@ export default function IndexPage() {
               Testing stuffs on a computer (like crafting this website).
             </i>
           </p>
-          <Link href="/about" className="text-teal-700 hover:underline">
+          <Link href="/about" className="text-lg text-teal-700 hover:underline">
             More about me »
           </Link>
         </div>

@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
-      display: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans]
+      sans: ['var(--font-catamaran)', ...defaultTheme.fontFamily.sans],
+      display: ['var(--font-lato)', ...defaultTheme.fontFamily.sans]
     },
     extend: {},
   },

@@ -1,15 +1,18 @@
-import { Inter, Roboto } from "@next/font/google";
+import { Lato, Catamaran } from "@next/font/google";
 
 import "../styles/index.scss";
 
 import Footer from "../components/footer";
 import Nav from "../components/nav";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const roboto = Roboto({
+const catamaran = Catamaran({
+  subsets: ["latin"],
+  variable: "--font-catamaran",
+});
+const lato = Lato({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-roboto",
+  variable: "--font-lato",
 });
 
 export const metadata = {
@@ -24,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${catamaran.variable} ${lato.variable}`}>
       <body className="container mx-auto max-w-4xl px-4">
         <Nav />
         {children}
