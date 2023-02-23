@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="prose mx-auto prose-headings:font-display lg:prose-xl">
+    <main className="prose prose-headings:font-display lg:prose-xl">
       <h1>About</h1>
 
       <h2>Who I am</h2>

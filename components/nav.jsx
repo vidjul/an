@@ -29,7 +29,7 @@ export default class nav extends Component {
     }
 
     return (
-      <div className="sticky top-0 z-50 mb-8 bg-white py-6">
+      <div className="sticky top-0 z-50 mb-8 bg-white py-8">
         <nav className="flex flex-wrap items-center justify-between">
           <div className="w-auto">
             <Link href="/" className="font-display text-xl font-semibold">

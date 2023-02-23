@@ -28,10 +28,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${catamaran.variable} ${lato.variable}`}>
-      <body className="container mx-auto max-w-4xl px-4">
-        <Nav />
-        {children}
-        <Footer />
+      <body className="bg-zinc-50">
+        <div className="container mx-auto max-w-7xl bg-white shadow-sm lg:px-8">
+          <div className="px-12">
+            <Nav />
+            {children}
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );
