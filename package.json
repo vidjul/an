@@ -8,7 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/mdx": "^13.1.6",
+    "@next/mdx": "13.2.1",
     "gray-matter": "^4.0.2",
     "next": "13.2.1",
     "next-mdx-remote": "^4.3.0",
