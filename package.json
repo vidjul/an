@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@next/mdx": "13.2.1",
+    "@vercel/analytics": "^0.1.10",
     "contentlayer": "^0.3.0",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.2",
