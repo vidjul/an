@@ -28,6 +28,39 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${catamaran.variable} ${lato.variable}`}>
+      <head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/an/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/an/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/an/favicon-16x16.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/an/android-chrome-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="/an/android-chrome-512x512.png"
+        />
+        <link rel="shortcut icon" href="/an/favicon.ico" />
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body className="bg-zinc-50">
         <div className="container mx-auto max-w-7xl bg-white shadow-sm lg:px-8">
           <div className="px-12">
