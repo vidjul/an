@@ -4,8 +4,8 @@ export default function PostLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="prose mx-auto prose-headings:font-display lg:prose-xl">
+    <article className="prose prose-headings:font-display lg:prose-xl">
       {children}
-    </main>
+    </article>
   );
 }

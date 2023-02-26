@@ -2,6 +2,8 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 
+import BlogIndex from "../components/blogIndex";
+
 export const metadata = {
   title: "Home | Vidushan Chooriyakumaran",
   description: "Vidushan Chooriyakumaran's personal website.",
@@ -42,7 +44,7 @@ export default function IndexPage() {
           href="/an/android-chrome-512x512.png"
         />
       </Head>
-      <section className="h-[calc(100vh-11rem)] max-w-2xl">
+      <section className="mb-8 max-w-2xl">
         <Image
           src="/an/images/vidushan.jpg"
           alt="A photo of myself."
@@ -69,6 +71,8 @@ export default function IndexPage() {
           More about me »
         </Link>
       </section>
+
+      <BlogIndex />
     </>
   );
 }
