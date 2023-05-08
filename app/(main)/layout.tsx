@@ -1,6 +1,6 @@
 import { Lato, Catamaran } from "next/font/google";
 
-import "../../styles/index.scss";
+import "./globals.css";
 
 import Footer from "../../components/footer";
 import Nav from "../../components/nav";
