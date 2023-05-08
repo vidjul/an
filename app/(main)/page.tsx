@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import BlogIndex from "../components/blogIndex";
+import BlogIndex from "../../components/blogIndex";
 
 export const metadata = {
   title: "Home | Vidushan Chooriyakumaran",

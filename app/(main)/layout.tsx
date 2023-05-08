@@ -1,10 +1,10 @@
 import { Lato, Catamaran } from "next/font/google";
 
-import "../styles/index.scss";
+import "../../styles/index.scss";
 
-import Footer from "../components/footer";
-import Nav from "../components/nav";
-import { AnalyticsWrapper } from "../components/analytics";
+import Footer from "../../components/footer";
+import Nav from "../../components/nav";
+import { AnalyticsWrapper } from "../../components/analytics";
 
 const catamaran = Catamaran({
   subsets: ["latin"],
