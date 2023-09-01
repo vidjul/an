@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['var(--font-catamaran)', ...defaultTheme.fontFamily.sans],
-      display: ['var(--font-lato)', ...defaultTheme.fontFamily.sans]
+      sans: ["var(--font-catamaran)", ...defaultTheme.fontFamily.sans],
+      display: ["var(--font-lato)", ...defaultTheme.fontFamily.sans],
     },
     extend: {},
   },

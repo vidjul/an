@@ -29,48 +29,46 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${catamaran.variable} ${lato.variable}`}>
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/an/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/an/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/an/favicon-16x16.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/an/android-chrome-192x192.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="512x512"
-          href="/an/android-chrome-512x512.png"
-        />
-        <link rel="shortcut icon" href="/an/favicon.ico" />
-        <meta name="theme-color" content="#ffffff" />
-      </head>
-      <body className="bg-zinc-50">
-        <div className="container mx-auto max-w-7xl bg-white shadow-sm lg:px-8">
-          <div className="px-12">
-            <Nav />
-            {children}
-            <Footer />
-            <AnalyticsWrapper />
-          </div>
-        </div>
+      <body className="mx-auto flex min-h-screen max-w-2xl flex-col bg-zinc-50">
+        <header className="px-4 py-8">
+          <span className="font-display text-xl font-bold">vidu.sh/an</span>
+        </header>
+        <main className="flex-1 px-4">
+          <p className="text-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, ab repellat? Dolore placeat, tenetur dolorem
+            consectetur, non architecto repellat, quasi nam ad impedit officia
+            consequatur! Quibusdam ipsum nemo ullam eaque.
+          </p>
+
+          <br />
+
+          <p className="text-lg">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+            illo blanditiis natus modi, labore eum nesciunt necessitatibus vitae
+            ullam, tempora, quasi quae corrupti ea? Et reiciendis eum corporis.
+            Id, eveniet!
+          </p>
+
+          <br />
+
+          <p className="text-lg">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum,
+            dolor, porro veniam soluta commodi vitae unde velit mollitia
+            accusantium incidunt deleniti doloribus! Labore dolor et dolore
+            quaerat culpa, repellendus aliquid!
+          </p>
+
+          <br />
+
+          <p className="text-lg">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
+            esse rerum fugit consectetur illo, ratione hic dolorem doloremque at
+            id mollitia ex repellendus labore tempore alias quidem excepturi
+            voluptatem velit!
+          </p>
+        </main>
+        <footer className="px-4 py-8">Thanks for passing by!</footer>
       </body>
     </html>
   );
