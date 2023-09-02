@@ -3,6 +3,7 @@ import { Catamaran, Lato } from "next/font/google";
 import "./globals.css";
 
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const catamaran = Catamaran({
   subsets: ["latin"],
@@ -30,8 +31,8 @@ export default function RootLayout({
       <body className="bg-zinc-50">
         <div className="mx-auto flex min-h-screen max-w-6xl flex-col bg-white shadow-sm">
           <Header />
-          <main className="flex-1 px-4 md:px-16">{children}</main>
-          <footer className="px-4 py-8">Thanks for passing by!</footer>
+          <main className="flex-1 px-4 md:px-32">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
