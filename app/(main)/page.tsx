@@ -11,7 +11,7 @@ export const metadata = {
 export default function IndexPage() {
   return (
     <>
-      <section className="mt-8">
+      <section className="my-16">
         <div className="relative mx-auto h-[216px] w-[216px]">
           <div className="absolute h-full w-full rounded-full bg-gradient-to-t from-sky-300/20"></div>
           <Image
