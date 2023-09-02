@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "../../components/footer";
 import Nav from "../../components/nav";
 import { AnalyticsWrapper } from "../../components/analytics";
+import Header from "../../components/Header";
 
 const catamaran = Catamaran({
   subsets: ["latin"],
@@ -31,12 +32,7 @@ export default function RootLayout({
     <html lang="en" className={`${catamaran.variable} ${lato.variable}`}>
       <body className="latte bg-zinc-50">
         <div className="mx-auto flex min-h-screen max-w-6xl flex-col bg-white shadow-sm">
-          <header className="px-4 py-8 md:px-16">
-            <span className="font-display text-xl font-bold">
-              vidu.sh
-              <span className="text-blue-500">/an</span>
-            </span>
-          </header>
+          <Header />
           <main className="flex-1 px-4 md:px-16">{children}</main>
           <footer className="px-4 py-8">Thanks for passing by!</footer>
         </div>
