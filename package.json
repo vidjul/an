@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/mdx": "13.4.19",
     "@vercel/analytics": "^0.1.10",
     "contentlayer": "0.3.4",
     "date-fns": "^2.29.3",
