@@ -3,7 +3,6 @@ import { Lato, Catamaran } from "next/font/google";
 import "./globals.css";
 
 import Footer from "../../components/footer";
-import Nav from "../../components/nav";
 import { AnalyticsWrapper } from "../../components/analytics";
 import Header from "../../components/Header";
 
