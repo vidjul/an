@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${catamaran.variable} ${lato.variable}`}>
-      <body className="latte bg-zinc-50">
+      <body className="bg-zinc-50">
         <div className="mx-auto flex min-h-screen max-w-6xl flex-col bg-white shadow-sm">
           <Header />
           <main className="flex-1 px-4 md:px-16">{children}</main>
