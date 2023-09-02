@@ -24,12 +24,10 @@ const PostLayout = ({ params }) => {
       <Head>
         <title>{post.title}</title>
       </Head>
-      <div className="mb-6">
-        <h1 className="mb-1 text-3xl font-bold">{post.title}</h1>
-        <time dateTime={post.date} className="text-sm text-slate-600">
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
-      </div>
+      <h1>{post.title}</h1>
+      <time className="flex justify-center" dateTime={post.date}>
+        {format(parseISO(post.date), "LLLL d, yyyy")}
+      </time>
       <MDXContent />
     </>
   );

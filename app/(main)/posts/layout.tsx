@@ -4,7 +4,7 @@ export default function PostLayout({
   children: React.ReactNode;
 }) {
   return (
-    <article className="prose prose-headings:font-display lg:prose-xl">
+    <article className="prose mx-auto lg:prose-lg prose-headings:font-display prose-h1:text-center">
       {children}
     </article>
   );
