@@ -41,7 +41,7 @@ export default function IndexPage() {
               testing stuffs on a computer (like crafting this website).
             </i>
           </p>
-          <Link href="/about" className="text-xl text-blue-500 hover:underline">
+          <Link href="/about" className="text-xl text-blue-300 hover:underline">
             More about me »
           </Link>
         </div>
