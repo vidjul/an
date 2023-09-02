@@ -1,9 +1,7 @@
-import { Lato, Catamaran } from "next/font/google";
+import { Catamaran, Lato } from "next/font/google";
 
 import "./globals.css";
 
-import Footer from "../../components/footer";
-import { AnalyticsWrapper } from "../../components/analytics";
 import Header from "../../components/Header";
 
 const catamaran = Catamaran({
