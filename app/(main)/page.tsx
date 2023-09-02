@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-import BlogIndex from "../../components/blogIndex";
+import PostsList from "../../components/PostsList";
 
 export const metadata = {
   title: "Home | Vidushan Chooriyakumaran",
@@ -45,6 +44,11 @@ export default function IndexPage() {
             More about me »
           </Link>
         </div>
+      </section>
+
+      <section>
+        <h3 className="my-4 font-display text-3xl">Recent posts</h3>
+        <PostsList />
       </section>
     </>
   );
