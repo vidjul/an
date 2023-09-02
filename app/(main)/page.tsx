@@ -11,35 +11,41 @@ export const metadata = {
 export default function IndexPage() {
   return (
     <>
-      <section className="mb-8 max-w-2xl">
-        <Image
-          src="/an/images/vidushan.jpg"
-          alt="A photo of myself."
-          className="rounded-full"
-          height={192}
-          width={192}
-        />
-        <h2 className="my-8 font-display text-5xl font-bold">
-          Hey, I&apos;m Vidushan!
-        </h2>
-        <p className="my-2 text-xl">
-          I&apos;m a 26 years old software engineer based in Paris. I love{" "}
-          <i className="font-semibold not-italic text-green-500">
-            Final Fantasy 7
-          </i>
-          ,{" "}
-          <i className="font-semibold not-italic text-green-500">Death Note</i>{" "}
-          and{" "}
-          <i className="font-semibold not-italic text-green-500">
-            Testing stuffs on a computer (like crafting this website).
-          </i>
-        </p>
-        <Link href="/about" className="text-xl text-teal-700 hover:underline">
-          More about me »
-        </Link>
-      </section>
+      <section className="mt-8">
+        <div className="relative mx-auto h-[216px] w-[216px]">
+          <div className="absolute h-full w-full rounded-full bg-gradient-to-t from-sky-300/20"></div>
+          <Image
+            src="/an/images/vidushan.jpg"
+            alt="A photo of myself."
+            className="rounded-full"
+            height={216}
+            width={216}
+          />
+        </div>
 
-      <BlogIndex />
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="mb-4 mt-8 font-display text-5xl font-bold">
+            Hey, I&apos;m Vidushan!
+          </h2>
+          <p className="my-2 text-xl">
+            I&apos;m a 26 years old software engineer based in Paris. I love{" "}
+            <i className="font-semibold not-italic text-sky-600/40">
+              Final Fantasy 7
+            </i>
+            ,{" "}
+            <i className="font-semibold not-italic text-sky-600/40">
+              Death Note
+            </i>{" "}
+            and{" "}
+            <i className="font-semibold not-italic text-sky-600/40">
+              testing stuffs on a computer (like crafting this website).
+            </i>
+          </p>
+          <Link href="/about" className="text-xl text-blue-500 hover:underline">
+            More about me »
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
