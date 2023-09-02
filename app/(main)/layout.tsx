@@ -34,7 +34,7 @@ export default function RootLayout({
           <header className="px-4 py-8 md:px-16">
             <span className="font-display text-xl font-bold">
               vidu.sh
-              <span className="text-sky-600/40">/an</span>
+              <span className="text-blue-500">/an</span>
             </span>
           </header>
           <main className="flex-1 px-4 md:px-16">{children}</main>
