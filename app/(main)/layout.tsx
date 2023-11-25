@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const catamaran = Catamaran({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           <Header />
           <main className="mt-8 flex-1 px-4 md:px-32">{children}</main>
           <Footer />
+          <Analytics />
         </div>
       </body>
     </html>
