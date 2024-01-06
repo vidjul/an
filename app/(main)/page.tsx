@@ -8,8 +8,10 @@ export const metadata = {
   description: "Vidushan Chooriyakumaran's personal website.",
 };
 
+const RECENT_POSTS_LIMIT = "3";
+
 export default async function IndexPage() {
-  const posts = await getPosts();
+  const posts = await getPosts(RECENT_POSTS_LIMIT);
 
   return (
     <>
@@ -49,10 +51,12 @@ export default async function IndexPage() {
         </div>
       </section>
 
-      <section>
-        <h3 className="my-4 font-display text-3xl">Recent posts</h3>
-        <PostsList allPosts={posts} />
-      </section>
+      {posts && (
+        <section>
+          <h3 className="my-4 font-display text-3xl">Recent posts</h3>
+          <PostsList allPosts={posts} />
+        </section>
+      )}
     </>
   );
 }

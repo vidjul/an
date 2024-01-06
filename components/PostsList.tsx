@@ -1,8 +1,13 @@
-import { PostOrPage } from "@tryghost/content-api";
+import { PostsOrPages } from "@tryghost/content-api";
 import { compareDesc, format, parseISO } from "date-fns";
+import { NextPage } from "next";
 import Link from "next/link";
 
-const PostsList = ({ allPosts }: { allPosts: PostOrPage[] }) => {
+type PostsListProps = {
+  allPosts: PostsOrPages;
+};
+
+const PostsList: NextPage<PostsListProps> = ({ allPosts }) => {
   const posts = allPosts.sort((a, b) => {
     return compareDesc(new Date(a.created_at!), new Date(b.created_at!));
   });
