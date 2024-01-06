@@ -1,13 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import PostsList from "../../components/PostsList";
+import { getPosts } from "lib/posts";
 
 export const metadata = {
   title: "Home | Vidushan Chooriyakumaran",
   description: "Vidushan Chooriyakumaran's personal website.",
 };
 
-export default function IndexPage() {
+export default async function IndexPage() {
+  const posts = await getPosts();
+
   return (
     <>
       <section className="my-16">
@@ -48,7 +51,7 @@ export default function IndexPage() {
 
       <section>
         <h3 className="my-4 font-display text-3xl">Recent posts</h3>
-        <PostsList />
+        <PostsList allPosts={posts} />
       </section>
     </>
   );
