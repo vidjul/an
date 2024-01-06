@@ -1,6 +1,5 @@
 import { format, parseISO } from "date-fns";
 import { getSinglePost } from "lib/posts";
-import { useMDXComponent } from "next-contentlayer/hooks";
 import Head from "next/head";
 import { notFound } from "next/navigation";
 

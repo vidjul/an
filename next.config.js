@@ -4,6 +4,4 @@ const nextConfig = {
   basePath: "/an",
 };
 
-const { withContentlayer } = require("next-contentlayer");
-
-module.exports = withContentlayer(nextConfig);
+module.exports = nextConfig;
