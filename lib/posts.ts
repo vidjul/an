@@ -1,7 +1,7 @@
 import GhostContentAPI from "@tryghost/content-api";
 
 const api = new GhostContentAPI({
-  url: "https://demo.ghost.io",
+  url: "https://vidu-sh-an.ghost.io",
   key: process.env.GHOST_API_KEY ?? "",
   version: "v5.0",
 });
