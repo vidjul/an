@@ -68,9 +68,9 @@ const PostPage = async ({ params }) => {
       </Head>
       <div>
         <h1>{post.title}</h1>
-        {post.created_at && (
-          <time className="flex justify-center" dateTime={post.created_at}>
-            {format(parseISO(post.created_at), "LLLL d, yyyy")}
+        {post.published_at && (
+          <time className="flex justify-center" dateTime={post.published_at}>
+            {format(parseISO(post.published_at), "LLLL d, yyyy")}
           </time>
         )}
         {content}
