@@ -19,17 +19,8 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true,
-    "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"]
-    }
+    "strictNullChecks": true
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".contentlayer/generated"
-  ],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
