@@ -2,8 +2,14 @@
 const nextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx"],
   basePath: "/an",
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "static.ghost.org",
+      },
+    ],
+  },
 };
 
-const { withContentlayer } = require("next-contentlayer");
-
-module.exports = withContentlayer(nextConfig);
+module.exports = nextConfig;

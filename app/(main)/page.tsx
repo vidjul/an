@@ -1,13 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import PostsList from "../../components/PostsList";
+import { getPosts } from "lib/posts";
 
 export const metadata = {
   title: "Home | Vidushan Chooriyakumaran",
   description: "Vidushan Chooriyakumaran's personal website.",
 };
 
-export default function IndexPage() {
+const RECENT_POSTS_LIMIT = "3";
+
+export default async function IndexPage() {
+  const posts = await getPosts(RECENT_POSTS_LIMIT);
+
   return (
     <>
       <section className="my-16">
@@ -46,10 +51,12 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section>
-        <h3 className="my-4 font-display text-3xl">Recent posts</h3>
-        <PostsList />
-      </section>
+      {posts && (
+        <section>
+          <h3 className="my-4 font-display text-3xl">Recent posts</h3>
+          <PostsList allPosts={posts} />
+        </section>
+      )}
     </>
   );
 }
