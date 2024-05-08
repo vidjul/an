@@ -11,7 +11,16 @@ const api = new GhostContentAPI({
       apiUrl.searchParams.set(key, encodeURIComponent(params[key])),
     );
 
-    return fetch(apiUrl, { method, headers }).then((res) => res.json());
+    return fetch(apiUrl, { method, headers })
+      .then(async (res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return { data: await res.json() };
+      })
+      .catch((error) => {
+        console.error("Fetch error:", error);
+      });
   },
 });
 
