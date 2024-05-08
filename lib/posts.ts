@@ -4,6 +4,15 @@ const api = new GhostContentAPI({
   url: "https://vidu-sh-an.ghost.io",
   key: process.env.GHOST_API_KEY ?? "",
   version: "v5.0",
+  makeRequest: ({ url, method, params, headers }) => {
+    const apiUrl = new URL(url);
+
+    Object.keys(params).map((key) =>
+      apiUrl.searchParams.set(key, encodeURIComponent(params[key])),
+    );
+
+    return fetch(apiUrl, { method, headers }).then((res) => res.json());
+  },
 });
 
 export async function getPosts(limit: string = "all") {

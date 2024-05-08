@@ -308,12 +308,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tryghost/content-api@npm:1.11.20":
-  version: 1.11.20
-  resolution: "@tryghost/content-api@npm:1.11.20"
+"@tryghost/content-api@npm:1.11.21":
+  version: 1.11.21
+  resolution: "@tryghost/content-api@npm:1.11.21"
   dependencies:
     axios: "npm:^1.0.0"
-  checksum: 10c0/5f0e8cfee3ebaeb8045d893c0cb5420fb3acc370fc94843bd365ce156d1276f3d1c13d1b6b3966edf7a219b9d6c2305a50034d62f407d4e8b7b1fc28bb774d7a
+  checksum: 10c0/21972afbba19d7190e1d4da46bacea931e9071bcea41276a31a928c038eafa816fadc06ecc43baf74dfb195615f92955379f841ea6ed1e494df00d7d3719c438
   languageName: node
   linkType: hard
 
@@ -407,10 +407,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/tryghost__content-api@npm:1.3.14":
-  version: 1.3.14
-  resolution: "@types/tryghost__content-api@npm:1.3.14"
-  checksum: 10c0/6b1fe4755bac6d051d61aa5b1f897e53d35e782a9b3d18fb64ae75b5373edf7e77be6a899f2fa88271d44001d858d09ba75338b7d8d31daab803d71247c83097
+"@types/tryghost__content-api@npm:1.3.16":
+  version: 1.3.16
+  resolution: "@types/tryghost__content-api@npm:1.3.16"
+  checksum: 10c0/8248b91d040d1e4963645b7765384f3b727e032c822117d1c1ed1333af175cae03aea4f76e586320b12c049995622b1322b1d4d4aa0c81b457cc03596b68cb92
   languageName: node
   linkType: hard
 
@@ -569,11 +569,11 @@ __metadata:
   resolution: "an@workspace:."
   dependencies:
     "@tailwindcss/typography": "npm:0.5.9"
-    "@tryghost/content-api": "npm:1.11.20"
+    "@tryghost/content-api": "npm:1.11.21"
     "@types/node": "npm:18.14.0"
     "@types/react": "npm:18.3.1"
     "@types/react-dom": "npm:18.3.0"
-    "@types/tryghost__content-api": "npm:1.3.14"
+    "@types/tryghost__content-api": "npm:1.3.16"
     "@vercel/analytics": "npm:1.1.1"
     "@vercel/speed-insights": "npm:1.0.3"
     autoprefixer: "npm:10.4.14"
