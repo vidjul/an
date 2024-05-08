@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="prose prose-headings:font-display lg:prose-xl">
+    <main className="prose lg:prose-xl prose-headings:font-display">
       <h1>About</h1>
 
       <h2>Who I am</h2>
@@ -20,7 +20,7 @@ export default function AboutPage() {
         watching anime, or sharing moments with my cousins and family.
       </p>
 
-      <Link href="/cv.pdf">Résumé</Link>
+      <Link href="/resume.pdf">Résumé</Link>
 
       <h2>What is this website about</h2>
 
