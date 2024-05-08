@@ -43,6 +43,8 @@ export async function generateMetadata({ params }) {
 
   const post = await getSinglePost(params.slug);
 
+  console.debug(post?.title);
+
   if (post?.title) {
     title = post.title;
   }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import PostsList from "../../components/PostsList";
+import PostsList from "../components/PostsList";
 import { getPosts } from "lib/posts";
 
 export const metadata = {
