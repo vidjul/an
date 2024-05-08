@@ -9,7 +9,6 @@ import rehypeParse from "rehype-parse";
 import rehypeReact, { Options } from "rehype-react";
 import { unified } from "unified";
 
-// @ts-expect-error: Types are missing
 const { Fragment, jsx, jsxs } = prodRuntime;
 
 const options: Options = {
