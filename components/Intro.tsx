@@ -1,11 +1,9 @@
-"use client";
-
-import Link from "next/link";
 import Image from "next/image";
-import { useMyAge } from "hooks/useMyAge";
+import Link from "next/link";
+import { getMyAge } from "utils/getMyAge";
 
 export const Intro = () => {
-  const myAge = useMyAge();
+  const myAge = getMyAge();
 
   return (
     <section className="my-16">

@@ -1,9 +1,7 @@
-"use client";
-
-import { useMyAge } from "hooks/useMyAge";
+import { getMyAge } from "utils/getMyAge";
 
 export const Intro = () => {
-  const myAge = useMyAge();
+  const myAge = getMyAge();
 
   return (
     <p>
