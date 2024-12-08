@@ -3,7 +3,6 @@ import { getSinglePost } from "lib/posts";
 import Head from "next/head";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import React from "react";
 import * as prodRuntime from "react/jsx-runtime";
 import rehypeParse from "rehype-parse";
 import rehypeReact, { Options } from "rehype-react";
@@ -41,8 +40,6 @@ export async function generateMetadata({ params }) {
   let title = "...";
 
   const post = await getSinglePost(params.slug);
-
-  console.debug(post?.title);
 
   if (post?.title) {
     title = post.title;
