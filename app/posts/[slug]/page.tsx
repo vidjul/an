@@ -53,11 +53,11 @@ export async function generateMetadata({ params }) {
 const PostPage = async ({ params }) => {
   const post = await getSinglePost(params.slug);
 
-  if (!post?.html) {
+  if (!post?.content) {
     notFound();
   }
 
-  const content = postProcessor.processSync(post.html).result;
+  const content = postProcessor.processSync(post.content).result;
 
   return (
     <>
@@ -66,9 +66,9 @@ const PostPage = async ({ params }) => {
       </Head>
       <div>
         <h1>{post.title}</h1>
-        {post.published_at && (
-          <time className="flex justify-center" dateTime={post.published_at}>
-            {format(parseISO(post.published_at), "LLLL d, yyyy")}
+        {post.date && (
+          <time className="flex justify-center" dateTime={post.date}>
+            {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
         )}
         {content}

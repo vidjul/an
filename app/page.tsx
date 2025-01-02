@@ -1,16 +1,16 @@
-import PostsList from "../components/PostsList";
-import { getPosts } from "lib/posts";
 import { Intro } from "components/Intro";
+import { getPosts } from "lib/posts";
+import PostsList from "../components/PostsList";
 
 export const metadata = {
   title: "Home | Vidushan Chooriyakumaran",
   description: "Vidushan Chooriyakumaran's personal website.",
 };
 
-const RECENT_POSTS_LIMIT = "3";
+const RECENT_POSTS_LIMIT = 3;
 
 export default async function IndexPage() {
-  const posts = await getPosts(RECENT_POSTS_LIMIT);
+  const posts = getPosts(RECENT_POSTS_LIMIT);
 
   return (
     <>

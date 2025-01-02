@@ -1,45 +1,9 @@
-import GhostContentAPI from "@tryghost/content-api";
+import { posts } from ".velite";
 
-const api = new GhostContentAPI({
-  url: "https://vidu-sh-an.ghost.io",
-  key: process.env.GHOST_API_KEY ?? "",
-  version: "v5.0",
-  makeRequest: ({ url, method, params, headers }) => {
-    const apiUrl = new URL(url);
-
-    Object.keys(params).map((key) =>
-      apiUrl.searchParams.set(key, encodeURIComponent(params[key])),
-    );
-
-    return fetch(apiUrl, { method, headers })
-      .then(async (res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return { data: await res.json() };
-      })
-      .catch((error) => {
-        console.error("Fetch error:", error);
-      });
-  },
-});
-
-export async function getPosts(limit: string = "all") {
-  return await api.posts
-    .browse({
-      limit,
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+export function getPosts(limit: number = 5) {
+  return posts.slice(0, limit);
 }
 
-export async function getSinglePost(postSlug) {
-  return await api.posts
-    .read({
-      slug: postSlug,
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+export function getSinglePost(postSlug: string) {
+  return posts.find((post) => post.slug === `posts/${postSlug}`);
 }
