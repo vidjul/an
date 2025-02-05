@@ -8,7 +8,7 @@ export const Intro = () => {
   return (
     <section className="my-16">
       <div className="relative mx-auto h-[216px] w-[216px]">
-        <div className="absolute h-full w-full rounded-full bg-gradient-to-t from-sky-300/20"></div>
+        <div className="absolute h-full w-full rounded-full bg-linear-to-t from-sky-300/20"></div>
         <Image
           src="/an/images/vidushan.jpg"
           alt="A photo of myself."
