@@ -19,3 +19,12 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
