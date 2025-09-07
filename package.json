@@ -20,7 +20,7 @@
     "unified": "11.0.5"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.0.0",
+    "@tailwindcss/postcss": "^4.1.13",
     "@tailwindcss/typography": "0.5.9",
     "@types/node": "18.14.0",
     "@types/react": "18.3.1",
@@ -31,8 +31,8 @@
     "eslint-config-prettier": "9.0.0",
     "postcss": "8.4.29",
     "prettier": "3.0.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "4.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.13",
     "typescript": "4.9.5",
     "velite": "0.2.2"
   },

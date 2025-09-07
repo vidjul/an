@@ -704,7 +704,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/node@npm:^4.0.0":
+"@tailwindcss/node@npm:4.1.13":
   version: 4.1.13
   resolution: "@tailwindcss/node@npm:4.1.13"
   dependencies:
@@ -810,7 +810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide@npm:^4.0.0":
+"@tailwindcss/oxide@npm:4.1.13":
   version: 4.1.13
   resolution: "@tailwindcss/oxide@npm:4.1.13"
   dependencies:
@@ -857,17 +857,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/postcss@npm:4.0.0":
-  version: 4.0.0
-  resolution: "@tailwindcss/postcss@npm:4.0.0"
+"@tailwindcss/postcss@npm:^4.1.13":
+  version: 4.1.13
+  resolution: "@tailwindcss/postcss@npm:4.1.13"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
-    "@tailwindcss/node": "npm:^4.0.0"
-    "@tailwindcss/oxide": "npm:^4.0.0"
-    lightningcss: "npm:^1.29.1"
+    "@tailwindcss/node": "npm:4.1.13"
+    "@tailwindcss/oxide": "npm:4.1.13"
     postcss: "npm:^8.4.41"
-    tailwindcss: "npm:4.0.0"
-  checksum: 10c0/a605393e9939026d8b723f676dfe5ba0bfcfc8dc3c3c26329890b0f9119b1f78ef9c8c6983bdeecbd5dc88bd2700a31f64ebdd386ac4c973ba789237baa8d55c
+    tailwindcss: "npm:4.1.13"
+  checksum: 10c0/c5ea1cc00a966989df274ec4de44294a08344d3957636eb416f7e95a84060ddbc974e66968c2b88c6eb2e90b217d231f2b33e8af4792836b4025f26a95ce3ab2
   languageName: node
   linkType: hard
 
@@ -1277,7 +1276,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "an@workspace:."
   dependencies:
-    "@tailwindcss/postcss": "npm:4.0.0"
+    "@tailwindcss/postcss": "npm:^4.1.13"
     "@tailwindcss/typography": "npm:0.5.9"
     "@types/node": "npm:18.14.0"
     "@types/react": "npm:18.3.1"
@@ -1292,12 +1291,12 @@ __metadata:
     next: "npm:14.2.3"
     postcss: "npm:8.4.29"
     prettier: "npm:3.0.3"
-    prettier-plugin-tailwindcss: "npm:^0.6.11"
+    prettier-plugin-tailwindcss: "npm:^0.6.14"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     rehype-parse: "npm:9.0.1"
     rehype-react: "npm:8.0.0"
-    tailwindcss: "npm:4.0.0"
+    tailwindcss: "npm:^4.1.13"
     typescript: "npm:4.9.5"
     unified: "npm:11.0.5"
     velite: "npm:0.2.2"
@@ -3625,7 +3624,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lightningcss@npm:1.30.1, lightningcss@npm:^1.29.1":
+"lightningcss@npm:1.30.1":
   version: 1.30.1
   resolution: "lightningcss@npm:1.30.1"
   dependencies:
@@ -4643,7 +4642,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.6.11":
+"prettier-plugin-tailwindcss@npm:^0.6.14":
   version: 0.6.14
   resolution: "prettier-plugin-tailwindcss@npm:0.6.14"
   peerDependencies:
@@ -5541,14 +5540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.0":
-  version: 4.0.0
-  resolution: "tailwindcss@npm:4.0.0"
-  checksum: 10c0/418b1cb02c46f5064bdd4931d8bb030e5c2a986744226dc282b47ecd4b95d1eb919a6f35a68cac948fbf3224fd976feafd9476e289cb5774062f6a3b2a49606e
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:4.1.13":
+"tailwindcss@npm:4.1.13, tailwindcss@npm:^4.1.13":
   version: 4.1.13
   resolution: "tailwindcss@npm:4.1.13"
   checksum: 10c0/2b80b4b11463818fd16063b7cc13fd0f6e18d7e3c3e54bbdc98742981be807884addb1dd657bc6816cb4085197b7d583f5064f619e1039a54221ffa36b7ed4c0
