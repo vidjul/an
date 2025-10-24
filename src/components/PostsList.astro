@@ -11,7 +11,7 @@ const sortedPosts = posts.sort((a, b) =>
 <div class="space-y-8">
   {sortedPosts.map((post) => (
     <article class="border-b border-gray-200 pb-8 last:border-0">
-      <a href={`/an/posts/${post.data.slug}`} class="group">
+      <a href={`/an/posts/${post.slug}`} class="group">
         <h2 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600">
           {post.data.title}
         </h2>
