@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Intro from '../components/Intro.astro';
+---
+
+<BaseLayout
+  title="About - an"
+  description="About this blog and its author"
+>
+  <Intro title="About" />
+  <div class="container mx-auto px-4 py-12">
+    <div class="prose prose-lg max-w-3xl">
+      <p class="text-lg text-gray-700">
+        This is a personal blog where I share thoughts on software development,
+        design, and building products.
+      </p>
+      <p class="mt-6 text-lg text-gray-700">
+        Topics include web development, architecture, developer experience,
+        and lessons learned from building software.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
