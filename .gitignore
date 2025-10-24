@@ -48,3 +48,6 @@ public/static
 
 # obsidian
 .obsidian
+
+# worktrees
+.worktrees/
