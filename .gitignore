@@ -51,3 +51,6 @@ public/static
 
 # worktrees
 .worktrees/
+
+# astro
+.astro
