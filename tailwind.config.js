@@ -1,18 +1,18 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-
-module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-  ],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    fontFamily: {
-      sans: ["var(--font-catamaran)", ...defaultTheme.fontFamily.sans],
-      display: ["var(--font-lato)", ...defaultTheme.fontFamily.sans],
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+          },
+        },
+      },
     },
-    extend: {},
   },
-  variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
