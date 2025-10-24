@@ -1,0 +1,21 @@
+---
+import Breadcrumbs from './Breadcrumbs.astro';
+---
+
+<header class="border-b border-gray-200 bg-white">
+  <div class="container mx-auto px-4 py-6">
+    <div class="flex items-center justify-between">
+      <a href="/an" class="text-2xl font-bold text-gray-900 hover:text-gray-700">
+        an
+      </a>
+      <nav class="flex space-x-6">
+        <a href="/an" class="text-gray-600 hover:text-gray-900">Home</a>
+        <a href="/an/posts" class="text-gray-600 hover:text-gray-900">Posts</a>
+        <a href="/an/about" class="text-gray-600 hover:text-gray-900">About</a>
+      </nav>
+    </div>
+    <div class="mt-4">
+      <Breadcrumbs />
+    </div>
+  </div>
+</header>
