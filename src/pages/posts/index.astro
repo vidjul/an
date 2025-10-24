@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Intro from '../../components/Intro.astro';
+import PostsList from '../../components/PostsList.astro';
+---
+
+<BaseLayout
+  title="Posts - an"
+  description="All blog posts"
+>
+  <Intro
+    title="All Posts"
+    subtitle="Writings on software, design, and technology."
+  />
+  <div class="container mx-auto px-4 py-12">
+    <PostsList />
+  </div>
+</BaseLayout>
