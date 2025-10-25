@@ -1,21 +1,56 @@
 ---
-import Breadcrumbs from './Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+import URLBar from './URLBar';
+import type { Route } from '../types/navigation';
+
+// Static pages
+const pages: Route[] = [
+  {
+    type: 'page',
+    path: '/an',
+    displayPath: '',
+    label: 'Home',
+    category: 'Pages',
+    searchTerms: ['home', 'index'],
+  },
+  {
+    type: 'page',
+    path: '/an/posts',
+    displayPath: 'posts',
+    label: 'Posts',
+    category: 'Pages',
+    searchTerms: ['posts', 'blog', 'articles'],
+  },
+  {
+    type: 'page',
+    path: '/an/about',
+    displayPath: 'about',
+    label: 'About',
+    category: 'Pages',
+    searchTerms: ['about', 'info'],
+  },
+];
+
+// Dynamic posts from Content Collections
+const posts = await getCollection('posts');
+const postRoutes: Route[] = posts.map((post) => ({
+  type: 'post',
+  path: `/an/posts/${post.slug}`,
+  displayPath: `posts/${post.slug}`,
+  label: post.data.title,
+  category: 'Posts',
+  searchTerms: [post.data.title, post.slug, ...(post.data.excerpt ? [post.data.excerpt] : [])],
+}));
+
+// Combine all routes
+const allRoutes = [...pages, ...postRoutes];
+
+// Get current path
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="border-b border-gray-200 bg-white">
   <div class="container mx-auto px-4 py-6">
-    <div class="flex items-center justify-between">
-      <a href="/an" class="text-2xl font-bold text-gray-900 hover:text-gray-700">
-        an
-      </a>
-      <nav class="flex space-x-6">
-        <a href="/an" class="text-gray-600 hover:text-gray-900">Home</a>
-        <a href="/an/posts" class="text-gray-600 hover:text-gray-900">Posts</a>
-        <a href="/an/about" class="text-gray-600 hover:text-gray-900">About</a>
-      </nav>
-    </div>
-    <div class="mt-4">
-      <Breadcrumbs />
-    </div>
+    <URLBar client:load routes={allRoutes} currentPath={currentPath} />
   </div>
 </header>
