@@ -8,14 +8,13 @@ interface URLDisplayProps {
 export default function URLDisplay({ currentPath, onActivateSearch }: URLDisplayProps) {
   // Parse path into segments
   const segments = currentPath.split('/').filter(Boolean);
-  const baseUrl = 'https://vidu.sh';
 
   // Build clickable segments (skip 'an' as it's the base)
   const pathSegments = segments.slice(1); // Remove 'an' from segments
 
   return (
-    <div
-      className="flex items-center gap-1 rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 font-mono text-sm hover:border-gray-400 transition-colors cursor-text"
+    <h1
+      className="group flex flex-wrap items-baseline gap-1 cursor-pointer transition-opacity hover:opacity-75"
       onClick={onActivateSearch}
       role="button"
       tabIndex={0}
@@ -25,20 +24,31 @@ export default function URLDisplay({ currentPath, onActivateSearch }: URLDisplay
           onActivateSearch();
         }
       }}
-      aria-label="Activate search"
+      aria-label="Navigate or search pages"
     >
-      {/* Base URL (dimmed, not clickable) */}
-      <span className="text-gray-500">{baseUrl}/an</span>
+      {/* Domain (dimmed, not clickable) */}
+      <span className="text-lg text-gray-500">vidu.sh</span>
 
-      {/* Path segments */}
+      {/* Base path /an - clickable home link */}
+      <span className="text-lg text-gray-400">/</span>
+      <a
+        href="/an"
+        className="text-lg text-gray-900 hover:text-blue-600 transition-colors font-medium"
+        onClick={(e) => e.stopPropagation()}
+      >
+        an
+      </a>
+
+      {/* Path segments - uniform text-lg sizing */}
       {pathSegments.map((segment, index) => {
         const segmentPath = `/an/${pathSegments.slice(0, index + 1).join('/')}`;
+
         return (
           <React.Fragment key={index}>
-            <span className="text-gray-400">/</span>
+            <span className="text-lg text-gray-400">/</span>
             <a
               href={segmentPath}
-              className="text-gray-900 hover:text-blue-600 transition-colors"
+              className="text-lg text-gray-900 hover:text-blue-600 transition-colors font-medium"
               onClick={(e) => e.stopPropagation()}
             >
               {segment}
@@ -47,12 +57,10 @@ export default function URLDisplay({ currentPath, onActivateSearch }: URLDisplay
         );
       })}
 
-      {/* Search icon hint */}
-      <span className="ml-auto text-gray-400">
-        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
+      {/* Subtle search hint on hover */}
+      <span className="ml-2 text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+        Press / to search
       </span>
-    </div>
+    </h1>
   );
 }
