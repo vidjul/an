@@ -27,6 +27,12 @@ const {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
     <ViewTransitions />
+    <script>
+      import { inject } from '@vercel/analytics';
+      import { injectSpeedInsights } from '@vercel/speed-insights';
+      inject();
+      injectSpeedInsights();
+    </script>
   </head>
   <body class="flex min-h-screen flex-col bg-white text-gray-900 antialiased">
     <Header />
