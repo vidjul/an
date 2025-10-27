@@ -49,8 +49,6 @@ const allRoutes = [...pages, ...postRoutes];
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="border-b border-gray-200 bg-white">
-  <div class="container mx-auto px-4 py-6">
-    <URLBar client:load routes={allRoutes} currentPath={currentPath} />
-  </div>
+<header class="sticky top-0 z-10 bg-white px-4 py-8 font-display text-xl shadow-xs md:px-16">
+  <URLBar client:load routes={allRoutes} currentPath={currentPath} />
 </header>

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { useVirtualizer } from '@tanstack/react-virtual';
-import type { Route } from '../types/navigation';
+import React, { useEffect, useRef } from "react";
+import { useVirtualizer } from "@tanstack/react-virtual";
+import type { Route } from "../types/navigation";
 
 interface ResultsDropdownProps {
   results: Route[];
@@ -18,14 +18,17 @@ export default function ResultsDropdown({
   const parentRef = useRef<HTMLDivElement>(null);
 
   // Group results by category
-  const groupedResults = results.reduce((acc, route, index) => {
-    const category = route.category;
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push({ route, originalIndex: index });
-    return acc;
-  }, {} as Record<string, Array<{ route: Route; originalIndex: number }>>);
+  const groupedResults = results.reduce(
+    (acc, route, index) => {
+      const category = route.category;
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+      acc[category].push({ route, originalIndex: index });
+      return acc;
+    },
+    {} as Record<string, Array<{ route: Route; originalIndex: number }>>,
+  );
 
   const categories = Object.keys(groupedResults);
 
@@ -42,8 +45,10 @@ export default function ResultsDropdown({
   // Scroll selected item into view
   useEffect(() => {
     if (selectedIndex >= 0 && selectedIndex < results.length) {
-      const element = document.querySelector(`[data-result-index="${selectedIndex}"]`);
-      element?.scrollIntoView({ block: 'nearest' });
+      const element = document.querySelector(
+        `[data-result-index="${selectedIndex}"]`,
+      );
+      element?.scrollIntoView({ block: "nearest" });
     }
   }, [selectedIndex, results.length]);
 
@@ -62,10 +67,14 @@ export default function ResultsDropdown({
       role="listbox"
     >
       {categories.map((category) => (
-        <div key={category} role="group" aria-labelledby={`category-${category}`}>
+        <div
+          key={category}
+          role="group"
+          aria-labelledby={`category-${category}`}
+        >
           <div
             id={`category-${category}`}
-            className="bg-gray-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500"
+            className="bg-gray-50 px-3 py-2 text-xs font-semibold tracking-wide text-gray-500 uppercase"
           >
             {category}
           </div>
@@ -78,13 +87,13 @@ export default function ResultsDropdown({
                 data-result-index={originalIndex}
                 className={`block px-3 py-2 transition-colors ${
                   isSelected
-                    ? 'bg-blue-50 text-blue-700'
-                    : 'text-gray-900 hover:bg-gray-100'
+                    ? "bg-blue-50 text-blue-700"
+                    : "text-gray-900 hover:bg-gray-100"
                 }`}
                 onMouseEnter={() => onSelectIndex(originalIndex)}
                 onClick={(e) => {
-                  e.preventDefault();
-                  onNavigate(route.path);
+                  // Navigate using the href, Astro will intercept for view transitions
+                  // We don't preventDefault so the link works naturally
                 }}
                 role="option"
                 aria-selected={isSelected}
