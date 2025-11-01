@@ -100,6 +100,32 @@ export default function MobileSheet({
           <div className="h-1 w-12 rounded-full bg-gray-300" />
         </div>
 
+        {/* Header with inline search */}
+        <div className="border-b border-gray-200 px-4 py-4">
+          <div className="font-display flex items-center gap-1 text-lg">
+            <span>vidu.sh</span>
+            <span className="font-normal text-gray-300">/</span>
+            <a href="/an" className="text-blue-300">
+              an
+            </a>
+            {contextPath.map((segment, i) => (
+              <React.Fragment key={i}>
+                <span className="font-normal text-gray-300">/</span>
+                <span>{segment}</span>
+              </React.Fragment>
+            ))}
+            <span className="font-normal text-gray-300">/</span>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="..."
+              className="min-w-0 flex-1 border-none bg-transparent text-gray-400 outline-none placeholder:text-gray-300"
+              autoFocus
+            />
+          </div>
+        </div>
+
         {/* Breadcrumb path */}
         <div className="border-b border-gray-200 px-4 pb-3">
           <div className="flex items-center gap-1 text-sm">

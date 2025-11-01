@@ -426,25 +426,31 @@ export default function URLBar({ routes, currentPath }: URLBarProps) {
       <div className="md:hidden">
         <button
           onClick={() => setIsMobileSheetOpen(true)}
-          className="flex w-full items-center justify-between rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-left text-sm transition-colors hover:border-gray-400"
-          aria-label="Open navigation search"
+          className="group w-full text-left transition-opacity active:opacity-70"
+          aria-label="Open navigation"
         >
-          <span className="font-medium text-gray-900">
-            {currentPath.split("/").filter(Boolean).slice(-1)[0] || "Home"}
-          </span>
-          <svg
-            className="h-4 w-4 text-gray-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
+          <div className="flex items-baseline justify-between gap-2">
+            <div>
+              <span>vidu.sh</span>
+              <span className="font-normal text-gray-300">/</span>
+              <span className="text-blue-300">an</span>
+              {pathSegments.map((segment, index) => (
+                <React.Fragment key={index}>
+                  <span className="font-normal text-gray-300">/</span>
+                  <span>{segment}</span>
+                </React.Fragment>
+              ))}
+              {contextRoutes.length > 0 && (
+                <span className="font-normal text-gray-300">/</span>
+              )}
+              {/* Blinking cursor */}
+              <span className="animate-blink ml-0.5 inline-block text-gray-400">
+                _
+              </span>
+            </div>
+            {/* Tap hint */}
+            <span className="text-sm text-gray-400 opacity-70">tap</span>
+          </div>
         </button>
 
         <MobileSheet
