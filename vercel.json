@@ -1,6 +1,5 @@
 {
-  "buildCommand": "yarn build",
-  "outputDirectory": "dist",
+  "version": 2,
   "redirects": [
     {
       "source": "/",
