@@ -15,8 +15,4 @@ export default defineConfig({
   },
 
   adapter: vercel(),
-
-  redirects: {
-    "/": "/an",
-  },
 });
