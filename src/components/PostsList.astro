@@ -1,0 +1,37 @@
+---
+import { format } from 'date-fns';
+
+interface Props {
+  posts: Array<{
+    slug: string;
+    data: {
+      title: string;
+      date: Date;
+      excerpt: string;
+    };
+  }>;
+}
+
+const { posts } = Astro.props;
+
+// Sort posts by date descending
+const sortedPosts = posts.sort((a, b) => 
+  b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+{sortedPosts.map((post) => (
+  <div class="my-4 flex flex-col">
+    <span class="mt-1 text-sm text-neutral-500">
+      {format(post.data.date, "yyyy — dd MMM.")}
+    </span>
+    <a
+      class="font-semi-bold mb-1 font-display text-2xl hover:text-sky-600/40"
+      href={`/an/posts/${post.slug}`}
+    >
+      {post.data.title}
+    </a>
+
+    <p class="text-neutral-600">{post.data.excerpt}</p>
+  </div>
+))}

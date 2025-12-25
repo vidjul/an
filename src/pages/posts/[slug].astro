@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { format } from 'date-fns';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <article class="prose mx-auto lg:prose-lg prose-headings:font-display prose-h1:text-center">
+    <h1>{post.data.title}</h1>
+    {post.data.date && (
+      <time class="flex justify-center" datetime={post.data.date.toISOString()}>
+        {format(post.data.date, "LLLL d, yyyy")}
+      </time>
+    )}
+    <Content />
+  </article>
+</Layout>
