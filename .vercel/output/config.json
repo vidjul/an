@@ -2,6 +2,13 @@
 	"version": 3,
 	"routes": [
 		{
+			"src": "^/an$",
+			"headers": {
+				"Location": "/an/an"
+			},
+			"status": 301
+		},
+		{
 			"handle": "filesystem"
 		},
 		{
