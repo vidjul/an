@@ -1,0 +1,39 @@
+---
+import { getMyAge } from '../utils/getMyAge';
+
+const myAge = getMyAge();
+---
+
+<section class="my-16">
+  <div class="relative mx-auto h-[216px] w-[216px]">
+    <div class="absolute h-full w-full rounded-full bg-linear-to-t from-sky-300/20"></div>
+    <img
+      src="/an/images/vidushan.jpg"
+      alt="A photo of myself."
+      class="rounded-full"
+      height="216"
+      width="216"
+    />
+  </div>
+
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="mb-4 mt-8 font-display text-5xl font-bold">
+      Hey, I'm Vidushan!
+    </h2>
+    <p class="my-2 text-xl">
+      I'm a {myAge} years old software engineer based in Paris. I love{" "}
+      <i class="font-semibold not-italic text-sky-600/40">
+        Final Fantasy 7
+      </i>
+      ,{" "}
+      <i class="font-semibold not-italic text-sky-600/40">Death Note</i>{" "}
+      and{" "}
+      <i class="font-semibold not-italic text-sky-600/40">
+        tinkering with computers.
+      </i>
+    </p>
+    <a href="/an/about" class="text-xl text-blue-300 hover:underline">
+      More about me »
+    </a>
+  </div>
+</section>

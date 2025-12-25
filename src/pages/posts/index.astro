@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PostsList from '../../components/PostsList.astro';
+
+const posts = await getCollection('posts');
+---
+
+<Layout 
+  title="Posts | Vidushan Chooriyakumaran"
+  description="All blog posts by Vidushan Chooriyakumaran."
+>
+  <section>
+    <h3 class="my-4 font-display text-3xl">Posts</h3>
+    <PostsList posts={posts} />
+  </section>
+</Layout>

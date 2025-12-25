@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Intro from '../components/Intro.astro';
+import PostsList from '../components/PostsList.astro';
+
+const RECENT_POSTS_LIMIT = 3;
+const allPosts = await getCollection('posts');
+const recentPosts = allPosts.slice(0, RECENT_POSTS_LIMIT);
+---
+
+<Layout 
+  title="Home | Vidushan Chooriyakumaran"
+  description="Vidushan Chooriyakumaran's personal website."
+>
+  <Intro />
+
+  {recentPosts.length > 0 && (
+    <section>
+      <h3 class="my-4 font-display text-3xl">Recent posts</h3>
+      <PostsList posts={recentPosts} />
+    </section>
+  )}
+</Layout>

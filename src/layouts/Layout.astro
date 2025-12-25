@@ -1,0 +1,58 @@
+---
+import '@fontsource-variable/catamaran';
+import '@fontsource/lato/400.css';
+import '../styles/global.css';
+
+import Header from '../components/Header';
+import Footer from '../components/Footer.astro';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Vidushan Chooriyakumaran', description = "Vidushan Chooriyakumaran's personal website." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    
+    <link rel="icon" type="image/svg+xml" href="/an/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/an/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/an/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/an/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/an/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/an/android-chrome-512x512.png" />
+    
+    <title>{title}</title>
+  </head>
+  <body class="bg-zinc-50">
+    <div class="mx-auto flex min-h-screen max-w-6xl flex-col bg-white shadow-xs">
+      <Header client:load />
+      <main class="mt-8 flex-1 px-4 md:px-32">
+        <slot />
+      </main>
+      <Footer />
+      <Analytics client:only="react" />
+      <SpeedInsights client:only="react" />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --font-catamaran: 'Catamaran Variable', sans-serif;
+    --font-lato: 'Lato', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-catamaran);
+  }
+</style>

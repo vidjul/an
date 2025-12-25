@@ -1,0 +1,9 @@
+import{r as c}from"./index.WFquGv8Z.js";var d={exports:{}},i={};/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var x;function m(){if(x)return i;x=1;var o=Symbol.for("react.transitional.element"),n=Symbol.for("react.fragment");function s(a,t,e){var l=null;if(e!==void 0&&(l=""+e),t.key!==void 0&&(l=""+t.key),"key"in t){e={};for(var u in t)u!=="key"&&(e[u]=t[u])}else e=t;return t=e.ref,{$$typeof:o,type:a,key:l,ref:t!==void 0?t:null,props:e}}return i.Fragment=n,i.jsx=s,i.jsxs=s,i}var h;function f(){return h||(h=1,d.exports=m()),d.exports}var r=f();const p=()=>r.jsx("span",{className:"font-normal text-gray-300",children:"/"}),v=r.jsxs("span",{children:[r.jsx(p,{}),r.jsx("a",{href:"/an/",className:"text-blue-300 hover:underline",children:"an"})]},0),j=()=>{const[o,n]=c.useState("");c.useEffect(()=>{n(window.location.pathname)},[]);const s=o.replace("/an","").slice(1).split("/").filter(Boolean),a=[v,s.map((t,e)=>{const l=`/an/${s.slice(0,e+1).join("/")}`,u=e===s.length-1?r.jsx("span",{children:t}):r.jsx("a",{className:"text-blue-300 hover:underline",href:l,children:t});return r.jsxs("span",{children:[r.jsx(p,{}),u]},e+1)})];return r.jsx(r.Fragment,{children:a})},R=()=>{const[o,n]=c.useState(!1),s=c.useRef(null),a=()=>{n(!0)},t=()=>{n(!1)};return c.useEffect(()=>{let e=null;if(s.current)return e=s.current,e.addEventListener("mouseenter",a),e.addEventListener("mouseleave",t),()=>{e&&(e.removeEventListener("mouseenter",a),e.removeEventListener("mouseleave",t))}},[]),r.jsxs("header",{ref:s,className:"font-display sticky top-0 z-10 bg-white px-4 py-8 text-xl shadow-xs md:px-16",children:[r.jsx("span",{children:"vidu.sh"}),r.jsx(j,{}),o&&r.jsx("span",{className:"animate-[blink_1s_step-end_infinite]",children:"_"})]})};export{R as default};
